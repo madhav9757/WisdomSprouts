@@ -3,29 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 4 - Responsive Navbar</title>
+    <title>Assignment 4 - Minimalist Responsive Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#" class="brand-logo">Logo</a>
-            <a href="#" class="nav-item">Home</a>
-            <a href="#" class="nav-item">Products</a>
-            <a href="#" class="nav-item">Services</a>
-        </div>
+    <div class="layout-wrapper">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#" class="brand-logo">&#9889; LOGO</a>
+                <a href="#" class="nav-item active">&#127968; Home</a>
+                <a href="#" class="nav-item">&#128230; Products</a>
+                <a href="#" class="nav-item">&#128736;&#65039; Services</a>
+                <a href="#" class="nav-item">&#128101; Team</a>
+            </div>
 
-        <form class="search-form" onsubmit="return false;">
-            <input type="text" placeholder="Search" aria-label="Search">
-            <button type="submit">Go</button>
-        </form>
-    </nav>
+            <div class="nav-right">
+                <form class="search-form" onsubmit="return false;">
+                    <span class="search-icon">&#128269;</span>
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit">Go</button>
+                </form>
+                <button class="nav-icon-btn" title="Notifications">&#128276;</button>
+            </div>
+        </nav>
 
-    <main class="page-content">
-        <h1>Assignment 4: Responsive Flexbox Navbar</h1>
-        <p>This navigation bar uses CSS Flexbox to automatically transition from a single-row wide desktop layout to a two-row narrow mobile layout. Resize your browser window to test the responsive breakpoint.</p>
-    </main>
+        <main class="page-content">
+            <section class="hero-card">
+                <div class="badge">&#9889; CSS Flexbox Responsive Navigation</div>
+                <h1>Adaptive Navbar Architecture</h1>
+                <p>Designed to demonstrate CSS Flexbox space distribution and wrapping. On wide desktop screens, links and search reside on a single horizontal plane. On narrow mobile viewports, the search bar expands to full width on a dedicated second tier.</p>
+            </section>
+
+            <section class="features-grid">
+                <div class="feature-box">
+                    <span class="feature-icon">&#128250;</span>
+                    <h3>Wide Screen Row</h3>
+                    <p>Single flex row alignment utilizing <code>justify-content: space-between</code> for maximum horizontal utility.</p>
+                </div>
+
+                <div class="feature-box">
+                    <span class="feature-icon">&#128241;</span>
+                    <h3>Narrow Screen Column</h3>
+                    <p>Media query activates at 680px, switching to multi-line wrapping with full-width search input.</p>
+                </div>
+
+                <div class="feature-box">
+                    <span class="feature-icon">&#127912;</span>
+                    <h3>Minimalist Aesthetic</h3>
+                    <p>High-contrast monochrome palette with clean 2px black geometry and zero excess ornamentation.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-brand">&#9889; LOGO &bull; Wisdom Sprouts IT Training</div>
+            <div class="footer-links">
+                <a href="#">Documentation</a>
+                <a href="#">Changelog</a>
+                <a href="#">Support</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
