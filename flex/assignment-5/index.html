@@ -3,88 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5 - Responsive Layout With Flexbox</title>
+    <title>Assignment 5 - Shonen Sphere Minimalist Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="page-container">
-        <header class="title-section">
-            <h1>Assignment 5</h1>
-            <p>For all devices using media query - Responsive LAYOUT With Flexbox</p>
+    <div class="layout">
+        <header class="header">
+            <div class="brand">
+                <span class="brand-icon">&#9889;</span>
+                <span class="brand-name">SHONEN SPHERE</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">&#128293; Feed</a>
+                <a href="#" class="nav-link">&#128218; Manga</a>
+                <a href="#" class="nav-link">&#127942; Rankings</a>
+                <a href="#" class="nav-link">&#128172; Community</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-search">
+                    <span>&#128269;</span>
+                    <input type="text" placeholder="Search series, arcs...">
+                </div>
+                <button class="icon-btn" title="Notifications">&#128276;</button>
+                <div class="user-pill">
+                    <img src="assets/naruto.jpg" alt="User">
+                    <span>Pro</span>
+                </div>
+            </div>
         </header>
 
-        <section class="devices-showcase">
-            <div class="showcase-header">
-                <h2>Responsive <span class="highlight">LAYOUT</span> With Flexbox</h2>
-                <span class="sub">In Just 4 Minutes</span>
-            </div>
+        <div class="body-container">
+            <aside class="aside-1">
+                <div class="sidebar-section">
+                    <h3 class="section-title">&#129517; Explore Channels</h3>
+                    <ul class="nav-menu">
+                        <li class="active"><span class="menu-icon">&#9876;</span> Shonen Action <span class="badge">Hot</span></li>
+                        <li><span class="menu-icon">&#128302;</span> Supernatural</li>
+                        <li><span class="menu-icon">&#127947;</span> Tournament Arcs</li>
+                        <li><span class="menu-icon">&#128640;</span> Sci-Fi &amp; Mecha</li>
+                        <li><span class="menu-icon">&#127917;</span> Psychological</li>
+                    </ul>
+                </div>
 
-            <div class="devices-row">
-                
-                <div class="device-column">
-                    <div class="device-frame desktop-mock">
-                        <header class="block header-block">Header</header>
-                        <div class="desktop-main-row">
-                            <aside class="block aside1-block">Aside 1</aside>
-                            <article class="block main-block">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa explicabo voluptas magnam doloribus error eius quas praesentium. Saepe expedita magni a, aut odio, quas optio voluptatibus voluptas minima asperiores corrupti?</p>
-                            </article>
-                            <aside class="block aside2-block">Aside 2</aside>
+                <div class="sidebar-section">
+                    <h3 class="section-title">&#127942; Global Ranking</h3>
+                    <ol class="ranking-list">
+                        <li>
+                            <span class="rank-pos">1</span>
+                            <div class="rank-details">
+                                <strong>One Piece</strong>
+                                <small>10.4M Readers</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-pos">2</span>
+                            <div class="rank-details">
+                                <strong>Jujutsu Kaisen</strong>
+                                <small>8.9M Readers</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-pos">3</span>
+                            <div class="rank-details">
+                                <strong>Dragon Ball Z</strong>
+                                <small>7.2M Readers</small>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <article class="featured-article">
+                    <div class="article-tags">
+                        <span class="tag-pill tag-featured">&#128293; Featured Story</span>
+                        <span class="tag-pill tag-meta">&#9201; 6 min read</span>
+                        <span class="tag-pill tag-meta">&#11088; 4.95 Rating</span>
+                    </div>
+
+                    <h1 class="article-title">The Unbreakable Will: How Shonen Protagonists Redefined Modern Heroism</h1>
+
+                    <div class="author-row">
+                        <div class="author-info">
+                            <img src="assets/itadori.jpg" alt="Author" class="author-avatar">
+                            <div>
+                                <span class="author-name">Alex Thorne</span>
+                                <small class="publish-date">Published 2 hours ago &bull; Analysis</small>
+                            </div>
                         </div>
-                        <footer class="block footer-block">Footer</footer>
+                        <button class="bookmark-btn">&#128278; Bookmark</button>
                     </div>
-                    <div class="device-tag">DESKTOP</div>
-                </div>
 
-                <div class="device-column">
-                    <div class="device-frame tablet-mock">
-                        <header class="block header-block tablet-header">Header</header>
-                        <article class="block main-block tablet-main">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa explicabo voluptas magnam doloribus error eius quas praesentium. Saepe expedita magni a, aut odio, quas optio voluptatibus voluptas minima asperiores corrupti?</p>
-                        </article>
-                        <div class="tablet-asides-row">
-                            <aside class="block aside1-block">Aside 1</aside>
-                            <aside class="block aside2-block">Aside 2</aside>
+                    <div class="article-hero-banner">
+                        <img src="assets/dragon-ball.jpg" alt="Dragon Ball Hero Banner">
+                        <span class="banner-badge">&#127916; Cultural Retrospective</span>
+                    </div>
+
+                    <div class="article-body">
+                        <p>From Son Goku pushing beyond physical boundaries to Naruto overcoming isolation through relentless empathy, the core philosophy of Shonen storytelling has evolved into a global artistic phenomenon.</p>
+                        <p>Rather than relying on invincible power fantasies, iconic narratives ground their climactic battles in personal philosophy, disciplined self-improvement, and the unbreakable bond between comrades facing existential stakes.</p>
+                    </div>
+
+                    <div class="article-footer-bar">
+                        <div class="stats-group">
+                            <span class="stat-item">&#10084;&#65039; 14,820</span>
+                            <span class="stat-item">&#128172; 940 comments</span>
+                            <span class="stat-item">&#128257; 2.1k shares</span>
                         </div>
-                        <footer class="block footer-block">Footer</footer>
+                        <button class="read-btn">Continue Reading &rarr;</button>
                     </div>
-                    <div class="device-tag">TABLET</div>
+                </article>
+            </main>
+
+            <aside class="aside-2">
+                <div class="sidebar-section">
+                    <h3 class="section-title">&#128225; Broadcast Schedule</h3>
+                    <ul class="schedule-list">
+                        <li>
+                            <span class="schedule-status live">LIVE</span>
+                            <div class="schedule-info">
+                                <strong>Demon Slayer S4</strong>
+                                <small>Ep. 11 Premiere Stream</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="schedule-status upcoming">TOMORROW</span>
+                            <div class="schedule-info">
+                                <strong>Jujutsu Kaisen</strong>
+                                <small>Manga Chapter 260</small>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="schedule-status upcoming">FRI</span>
+                            <div class="schedule-info">
+                                <strong>Chainsaw Man</strong>
+                                <small>Official Teaser Drop</small>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="device-column">
-                    <div class="device-frame mobile-mock">
-                        <header class="block header-block">Header</header>
-                        <article class="block main-block mobile-main">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa explicabo voluptas magnam doloribus error eius quas praesentium. Saepe expedita magni a, aut odio, quas optio voluptatibus voluptas minima asperiores corrupti?</p>
-                        </article>
-                        <aside class="block aside1-block mobile-aside">Aside 1</aside>
-                        <aside class="block aside2-block mobile-aside">Aside 2</aside>
-                        <footer class="block footer-block">Footer</footer>
+                <div class="sidebar-section mvp-card">
+                    <h3 class="section-title">&#11088; Weekly MVP Hero</h3>
+                    <div class="mvp-profile">
+                        <img src="assets/asta.jpg" alt="Asta" class="mvp-avatar">
+                        <div class="mvp-text">
+                            <strong>Asta</strong>
+                            <small>Black Clover &bull; 96% Votes</small>
+                        </div>
                     </div>
-                    <div class="device-tag">MOBILE</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="live-implementation">
-            <h3 class="live-title">Live Adaptive Layout (Resize your window to see Desktop &rarr; Tablet &rarr; Mobile)</h3>
-            <div class="live-layout-container">
-                <header class="block header-block">Header</header>
-                <div class="live-content-wrapper">
-                    <aside class="block aside1-block live-aside1">Aside 1</aside>
-                    <article class="block main-block live-main">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa explicabo voluptas magnam doloribus error eius quas praesentium. Saepe expedita magni a, aut odio, quas optio voluptatibus voluptas minima asperiores corrupti?</p>
-                    </article>
-                    <aside class="block aside2-block live-aside2">Aside 2</aside>
+                <div class="sidebar-section newsletter-box">
+                    <h4>&#128236; Weekly Dispatch</h4>
+                    <p>Curated chapter analyses and studio insights delivered to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Join</button>
+                    </form>
                 </div>
-                <footer class="block footer-block">Footer</footer>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <span class="footer-brand">&#9889; SHONEN SPHERE</span>
+                <span class="footer-sub">&bull; Wisdom Sprouts IT Training &bull; CSS Flexbox Responsive Layout</span>
             </div>
-        </section>
-    </main>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">API</a>
+                <a href="#">Support</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
