@@ -9,10 +9,42 @@
 <body>
 
     <header class="navbar">
-        <h2>Image Gallery</h2>
-        <div class="notification">
-            <img src="./assets/icon-svg/bell.svg" alt="Notifications">
-            <span class="badge-count">3</span>
+        <div class="nav-left">
+            <a href="#" class="brand">
+                <img src="./assets/pfp.jpg" alt="Logo" class="brand-logo">
+                <span class="brand-name">Image Gallery</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Shonen</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Supernatural</a></li>
+                        <li><a href="#">Classic</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Favorites</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-search">
+                <img src="./assets/icon-svg/search.svg" alt="Search">
+                <input type="text" placeholder="Search gallery...">
+            </div>
+
+            <div class="notification" title="Notifications">
+                <img src="./assets/icon-svg/bell.svg" alt="Notifications">
+                <span class="badge-count">3</span>
+            </div>
+
+            <div class="user-profile" title="My Profile">
+                <img src="./assets/icon-svg/user.svg" alt="User">
+            </div>
         </div>
     </header>
 
