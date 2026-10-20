@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
+    <title>Assignment 1 - Flexbox Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <main class="page-wrapper">
         <header class="assignment-header">
-            <h1>CSS Flexbox Assignment</h1>
-            <p>Learn and explore CSS Flexbox layouts</p>
+            <span class="badge">&#9889; CSS Flexbox Mastery</span>
+            <h1>Assignment 1: Flexbox Layout Architecture</h1>
+            <p>An interactive study of 8 foundational Flexbox behaviors: sizing, proportional growth, shrinking, alignment, and multi-line wrapping.</p>
         </header>
 
         <section class="task-row">
-            <span class="task-num">1.</span>
+            <div class="task-header">
+                <span class="task-num">01.</span>
+                <span class="task-title">Content Sizing (flex: 0 0 auto)</span>
+            </div>
             <div class="showcase-box case-1">
-                <div class="item blue">Home</div>
-                <div class="item blue">Welcome to Our Website</div>
-                <div class="item blue">Contact</div>
+                <div class="item black">&#127968; Home</div>
+                <div class="item black">&#128075; Welcome to Our Website</div>
+                <div class="item black">&#128222; Contact</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">2.</span>
+            <div class="task-header">
+                <span class="task-num">02.</span>
+                <span class="task-title">Equal Width Distribution (flex: 1)</span>
+            </div>
             <div class="showcase-box case-2">
-                <div class="item blue">Dashboard</div>
-                <div class="item blue">Projects</div>
-                <div class="item blue">Settings</div>
+                <div class="item black">&#128202; Dashboard</div>
+                <div class="item black">&#128193; Projects</div>
+                <div class="item black">&#9881;&#65039; Settings</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">3.</span>
+            <div class="task-header">
+                <span class="task-num">03.</span>
+                <span class="task-title">Proportional Ratio (1 : 1 : 2)</span>
+            </div>
             <div class="showcase-box case-3">
-                <div class="item blue">HTML</div>
-                <div class="item blue">CSS</div>
-                <div class="item green">JavaScript</div>
+                <div class="item black">&#127760; HTML</div>
+                <div class="item black">&#127912; CSS</div>
+                <div class="item outline-accent">&#9889; JavaScript (2x Share)</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">4.</span>
+            <div class="task-header">
+                <span class="task-num">04.</span>
+                <span class="task-title">Dynamic Middle Expansion with Fixed Flanks</span>
+            </div>
             <div class="showcase-box case-4">
-                <div class="item blue shrink-0">Logo</div>
-                <div class="item blue grow-mid">Flexbox makes it easy to create responsive layouts that adapt to
-                    different screen sizes and distribute space between elements.</div>
-                <div class="item green shrink-0">Menu</div>
+                <div class="item black shrink-0">&#128293; Logo</div>
+                <div class="item black grow-mid">Flexbox makes it easy to create responsive layouts that adapt to different screen sizes and distribute space between elements.</div>
+                <div class="item outline-accent shrink-0">&#9776; Menu</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">5.</span>
+            <div class="task-header">
+                <span class="task-num">05.</span>
+                <span class="task-title">Non-Growing Clustered Group (flex-grow: 0)</span>
+            </div>
             <div class="showcase-box case-5">
-                <div class="item blue">Frontend</div>
-                <div class="item blue">Backend</div>
-                <div class="item blue">Database</div>
+                <div class="item black">&#128187; Frontend</div>
+                <div class="item black">&#9881;&#65039; Backend</div>
+                <div class="item black">&#128452;&#65039; Database</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">6.</span>
+            <div class="task-header">
+                <span class="task-num">06.</span>
+                <span class="task-title">Full Edge Expansion on Last Item</span>
+            </div>
             <div class="showcase-box case-6">
-                <div class="item blue">About Us</div>
-                <div class="item blue">Our Services</div>
-                <div class="item orange grow-end">Get Started</div>
+                <div class="item black">&#128065; About Us</div>
+                <div class="item black">&#9889; Our Services</div>
+                <div class="item outline-accent grow-end">&#128640; Get Started &rarr;</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">7.</span>
+            <div class="task-header">
+                <span class="task-num">07.</span>
+                <span class="task-title">Equal Height Stretch (align-items: stretch)</span>
+            </div>
             <div class="showcase-box case-7">
-                <div class="item blue col-text">
-                    <span class="item-title">About Flexbox</span>
-                    <p>CSS Flexbox is a powerful layout system that helps arrange elements in rows or columns. It
-                        provides control over alignment, spacing, sizing, and responsiveness, making it easier to build
-                        modern web interfaces.</p>
+                <div class="item black col-text">
+                    <span class="item-title">&#128218; About Flexbox</span>
+                    <p>CSS Flexbox is a powerful layout system that helps arrange elements in rows or columns. It provides control over alignment, spacing, sizing, and responsiveness, making it easier to build modern web interfaces.</p>
                 </div>
-                <div class="item orange col-side">Learn More</div>
+                <div class="item outline-accent col-side">&#128279; Learn More</div>
             </div>
         </section>
 
         <section class="task-row">
-            <span class="task-num">8.</span>
+            <div class="task-header">
+                <span class="task-num">08.</span>
+                <span class="task-title">Multi-Line Break (flex-wrap: wrap)</span>
+            </div>
             <div class="showcase-box case-8">
-                <div class="item blue top-item">Our Mission</div>
-                <div class="item blue top-item">Our Vision</div>
-                <div class="item orange bottom-row">Join Our Team</div>
+                <div class="item black top-item">&#127919; Our Mission</div>
+                <div class="item black top-item">&#128065; Our Vision</div>
+                <div class="item outline-accent bottom-row">&#128101; Join Our Team &bull; 100% Full Width Row</div>
             </div>
         </section>
     </main>
 
 </body>
-
 </html>
