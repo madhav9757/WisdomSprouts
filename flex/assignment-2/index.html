@@ -3,117 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2 - Circular Team Gallery</title>
+    <title>Assignment 2 - Shonen Anime Circular Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="page-container">
-        
         <header class="page-header">
             <span class="badge">Wisdom Sprouts &bull; CSS Flexbox</span>
-            <h1>Assignment 2: Circular Team &amp; Category Gallery</h1>
-            <p>A responsive 3&times;3 circular profile gallery demonstrating multi-line wrapping (<code>flex-wrap: wrap</code>), equal distribution, and <code>border-radius: 50%</code> circular styling.</p>
+            <h1>Assignment 2: Shonen Characters Circular Gallery</h1>
+            <p>A responsive 3&times;3 circular anime gallery demonstrating multi-line wrapping (<code>flex-wrap: wrap</code>), equal distribution, and <code>border-radius: 50%</code> circular styling.</p>
         </header>
 
         <section class="gallery-card-frame">
             <div class="frame-top-bar">
                 <div class="title-meta">
-                    <h2>Core Product Team</h2>
-                    <span class="count-tag">9 Members</span>
+                    <h2>Legendary Shonen Heroes</h2>
+                    <span class="count-tag">9 Characters</span>
                 </div>
                 <div class="filter-pills">
                     <span class="pill pill-active">All (9)</span>
-                    <span class="pill">Design</span>
-                    <span class="pill">Engineering</span>
-                    <span class="pill">Leadership</span>
+                    <span class="pill">Classic</span>
+                    <span class="pill">Modern</span>
+                    <span class="pill">Supernatural</span>
                 </div>
             </div>
 
             <div class="circular-flex-grid">
-                
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Alex Morgan" onerror="this.onerror=null; this.src='../../assignments/assets/pfp.jpg';">
+                        <img src="assets/naruto.jpg" alt="Naruto Uzumaki">
                     </div>
-                    <h3>Alex Morgan</h3>
-                    <p class="role">Creative Director</p>
-                    <span class="category-tag tag-design">Design</span>
+                    <h3>Naruto Uzumaki</h3>
+                    <p class="role">Naruto Shippuden</p>
+                    <span class="category-tag tag-classic">Classic</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Sarah Chen" onerror="this.onerror=null; this.src='../../assignments/assets/itadori.jpg';">
+                        <img src="assets/one-piece.jpg" alt="Monkey D. Luffy">
                     </div>
-                    <h3>Sarah Chen</h3>
-                    <p class="role">Lead Architect</p>
-                    <span class="category-tag tag-tech">Engineering</span>
+                    <h3>Monkey D. Luffy</h3>
+                    <p class="role">One Piece</p>
+                    <span class="category-tag tag-classic">Classic</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80" alt="Michael Ross" onerror="this.onerror=null; this.src='../../assignments/assets/ichigo.jpg';">
+                        <img src="assets/ichigo.jpg" alt="Ichigo Kurosaki">
                     </div>
-                    <h3>Michael Ross</h3>
-                    <p class="role">Frontend Lead</p>
-                    <span class="category-tag tag-tech">Engineering</span>
+                    <h3>Ichigo Kurosaki</h3>
+                    <p class="role">Bleach</p>
+                    <span class="category-tag tag-supernatural">Supernatural</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80" alt="Priya Sharma" onerror="this.onerror=null; this.src='../../assignments/assets/asta.jpg';">
+                        <img src="assets/dragon-ball.jpg" alt="Son Goku">
                     </div>
-                    <h3>Priya Sharma</h3>
-                    <p class="role">UI/UX Designer</p>
-                    <span class="category-tag tag-design">Design</span>
+                    <h3>Son Goku</h3>
+                    <p class="role">Dragon Ball Z</p>
+                    <span class="category-tag tag-classic">Classic</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80" alt="David Kim" onerror="this.onerror=null; this.src='../../assignments/assets/sukuna.jpg';">
+                        <img src="assets/itadori.jpg" alt="Yuji Itadori">
                     </div>
-                    <h3>David Kim</h3>
-                    <p class="role">Full Stack Developer</p>
-                    <span class="category-tag tag-tech">Engineering</span>
+                    <h3>Yuji Itadori</h3>
+                    <p class="role">Jujutsu Kaisen</p>
+                    <span class="category-tag tag-modern">Modern</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Elena Rostova" onerror="this.onerror=null; this.src='../../assignments/assets/naruto.jpg';">
+                        <img src="assets/sukuna.jpg" alt="Ryomen Sukuna">
                     </div>
-                    <h3>Elena Rostova</h3>
-                    <p class="role">Product Manager</p>
-                    <span class="category-tag tag-lead">Leadership</span>
+                    <h3>Ryomen Sukuna</h3>
+                    <p class="role">Jujutsu Kaisen</p>
+                    <span class="category-tag tag-supernatural">Supernatural</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80" alt="James Wilson" onerror="this.onerror=null; this.src='../../assignments/assets/dragon-ball.jpg';">
+                        <img src="assets/asta.jpg" alt="Asta">
                     </div>
-                    <h3>James Wilson</h3>
-                    <p class="role">DevOps Specialist</p>
-                    <span class="category-tag tag-tech">Engineering</span>
+                    <h3>Asta</h3>
+                    <p class="role">Black Clover</p>
+                    <span class="category-tag tag-modern">Modern</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80" alt="Aaliyah Khan" onerror="this.onerror=null; this.src='../../assignments/assets/death-note.jpg';">
+                        <img src="assets/death-note.jpg" alt="Light Yagami">
                     </div>
-                    <h3>Aaliyah Khan</h3>
-                    <p class="role">Brand &amp; Visual Lead</p>
-                    <span class="category-tag tag-design">Design</span>
+                    <h3>Light Yagami</h3>
+                    <p class="role">Death Note</p>
+                    <span class="category-tag tag-supernatural">Supernatural</span>
                 </div>
 
                 <div class="team-member-card">
                     <div class="avatar-ring">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80" alt="Liam Miller" onerror="this.onerror=null; this.src='../../assignments/assets/one-piece.jpg';">
+                        <img src="assets/Kirito_Minimal.png" alt="Kirito">
                     </div>
-                    <h3>Liam Miller</h3>
-                    <p class="role">Head of Engineering</p>
-                    <span class="category-tag tag-lead">Leadership</span>
+                    <h3>Kirito</h3>
+                    <p class="role">Sword Art Online</p>
+                    <span class="category-tag tag-modern">Modern</span>
                 </div>
             </div>
         </section>
