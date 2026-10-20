@@ -8,65 +8,67 @@
 </head>
 <body>
 
-    <header class="sticky-header">
+    <header class="navbar">
         <h2>Image Gallery</h2>
-        <div class="notification-container">
-            <span class="bell-icon">&#128276;</span>
-            <span class="notify-badge">3</span>
+        <div class="notification">
+            <img src="./assets/icon-svg/bell.svg" alt="Notifications">
+            <span class="badge-count">3</span>
         </div>
     </header>
 
-    <main class="gallery-container">
+    <main class="gallery">
         <div class="card">
-            <div class="image-wrapper">
-                <img src="./assets/pfp.jpg" alt="Gallery item">
-                <span class="badge badge-new">NEW</span>
+            <div class="image-box">
+                <img src="./assets/naruto.jpg" alt="Naruto">
+                <span class="badge">HOT</span>
             </div>
-            <div class="card-info">
-                <h3>Nature View</h3>
-                <p>Serene landscape capturing morning light and natural scenery.</p>
-                <button class="card-btn">View Details</button>
+            <div class="card-body">
+                <h3>Naruto</h3>
+                <p>The journey of a ninja aiming to become Hokage.</p>
+                <button>View</button>
             </div>
         </div>
 
         <div class="card">
-            <div class="image-wrapper">
-                <img src="./assets/pfp.jpg" alt="Gallery item">
-                <span class="badge badge-featured">FEATURED</span>
+            <div class="image-box">
+                <img src="./assets/itadori.jpg" alt="Jujutsu Kaisen">
+                <span class="badge">NEW</span>
             </div>
-            <div class="card-info">
-                <h3>Urban Life</h3>
-                <p>Architectural lines and street scenes in the heart of the city.</p>
-                <button class="card-btn">View Details</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-wrapper">
-                <img src="./assets/pfp.jpg" alt="Gallery item">
-                <span class="badge badge-sale">SALE 20%</span>
-            </div>
-            <div class="card-info">
-                <h3>Portrait Shoot</h3>
-                <p>Creative studio photography focusing on contrast and mood.</p>
-                <button class="card-btn">View Details</button>
+            <div class="card-body">
+                <h3>Jujutsu Kaisen</h3>
+                <p>A high school student enters the world of curses.</p>
+                <button>View</button>
             </div>
         </div>
 
         <div class="card">
-            <div class="image-wrapper">
-                <img src="./assets/pfp.jpg" alt="Gallery item">
-                <span class="badge badge-trending">TRENDING</span>
+            <div class="image-box">
+                <img src="./assets/death-note.jpg" alt="Death Note">
+                <span class="badge">TOP</span>
             </div>
-            <div class="card-info">
-                <h3>Creative Art</h3>
-                <p>Minimalist art prints with striking visual compositions.</p>
-                <button class="card-btn">View Details</button>
+            <div class="card-body">
+                <h3>Death Note</h3>
+                <p>A battle of wits between a genius student and a detective.</p>
+                <button>View</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="./assets/Kirito_Minimal.png" alt="Sword Art Online">
+                <span class="badge">POPULAR</span>
+            </div>
+            <div class="card-body">
+                <h3>Sword Art Online</h3>
+                <p>Players fight to survive inside a virtual reality game.</p>
+                <button>View</button>
             </div>
         </div>
     </main>
 
-    <button class="floating-btn" title="Back to top">&#8593;</button>
+    <a href="#" class="floating-btn" title="Back to Top">
+        <img src="./assets/icon-svg/arrow-up.svg" alt="Up">
+    </a>
 
 </body>
 </html>
