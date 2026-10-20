@@ -3,53 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2 - Circular Image Gallery</title>
+    <title>Assignment 2 - Circular Team Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="page-container">
-        <header class="title-section">
-            <h1>Assignment 2</h1>
-            <p>create image gallery</p>
+        
+        <header class="page-header">
+            <span class="badge">Wisdom Sprouts &bull; CSS Flexbox</span>
+            <h1>Assignment 2: Circular Team &amp; Category Gallery</h1>
+            <p>A responsive 3&times;3 circular profile gallery demonstrating multi-line wrapping (<code>flex-wrap: wrap</code>), equal distribution, and <code>border-radius: 50%</code> circular styling.</p>
         </header>
 
-        <section class="gallery-wrapper">
-            <div class="gallery-container">
-                <!-- Row 1 -->
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop&q=80" alt="Beach chairs and shack" onerror="this.onerror=null; this.src='../../assignments/assets/605599.jpg';">
+        <section class="gallery-card-frame">
+            <div class="frame-top-bar">
+                <div class="title-meta">
+                    <h2>Core Product Team</h2>
+                    <span class="count-tag">9 Members</span>
                 </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1572293007244-8b60335d2b7d?w=400&auto=format&fit=crop&q=80" alt="Street hydrant and asphalt" onerror="this.onerror=null; this.src='../../assignments/assets/7423411.jpg';">
+                <div class="filter-pills">
+                    <span class="pill pill-active">All (9)</span>
+                    <span class="pill">Design</span>
+                    <span class="pill">Engineering</span>
+                    <span class="pill">Leadership</span>
                 </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&auto=format&fit=crop&q=80" alt="Pier over the water" onerror="this.onerror=null; this.src='../../assignments/assets/Kirito_Minimal.png';">
+            </div>
+
+            <div class="circular-flex-grid">
+                
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Alex Morgan" onerror="this.onerror=null; this.src='../../assignments/assets/pfp.jpg';">
+                    </div>
+                    <h3>Alex Morgan</h3>
+                    <p class="role">Creative Director</p>
+                    <span class="category-tag tag-design">Design</span>
                 </div>
 
-                <!-- Row 2 -->
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?w=400&auto=format&fit=crop&q=80" alt="Town overview and greenery" onerror="this.onerror=null; this.src='../../assignments/assets/asta.jpg';">
-                </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&auto=format&fit=crop&q=80" alt="Motel facade with balcony" onerror="this.onerror=null; this.src='../../assignments/assets/death-note.jpg';">
-                </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop&q=80" alt="Outdoor cafe patio" onerror="this.onerror=null; this.src='../../assignments/assets/dragon-ball.jpg';">
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Sarah Chen" onerror="this.onerror=null; this.src='../../assignments/assets/itadori.jpg';">
+                    </div>
+                    <h3>Sarah Chen</h3>
+                    <p class="role">Lead Architect</p>
+                    <span class="category-tag tag-tech">Engineering</span>
                 </div>
 
-                <!-- Row 3 -->
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=400&auto=format&fit=crop&q=80" alt="Wooden pier pilings" onerror="this.onerror=null; this.src='../../assignments/assets/ichigo.jpg';">
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80" alt="Michael Ross" onerror="this.onerror=null; this.src='../../assignments/assets/ichigo.jpg';">
+                    </div>
+                    <h3>Michael Ross</h3>
+                    <p class="role">Frontend Lead</p>
+                    <span class="category-tag tag-tech">Engineering</span>
                 </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400&auto=format&fit=crop&q=80" alt="Birds perched on street poles" onerror="this.onerror=null; this.src='../../assignments/assets/itadori.jpg';">
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=80" alt="Priya Sharma" onerror="this.onerror=null; this.src='../../assignments/assets/asta.jpg';">
+                    </div>
+                    <h3>Priya Sharma</h3>
+                    <p class="role">UI/UX Designer</p>
+                    <span class="category-tag tag-design">Design</span>
                 </div>
-                <div class="circle-card">
-                    <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=400&auto=format&fit=crop&q=80" alt="Cold drink water cooler" onerror="this.onerror=null; this.src='../../assignments/assets/sukuna.jpg';">
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80" alt="David Kim" onerror="this.onerror=null; this.src='../../assignments/assets/sukuna.jpg';">
+                    </div>
+                    <h3>David Kim</h3>
+                    <p class="role">Full Stack Developer</p>
+                    <span class="category-tag tag-tech">Engineering</span>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Elena Rostova" onerror="this.onerror=null; this.src='../../assignments/assets/naruto.jpg';">
+                    </div>
+                    <h3>Elena Rostova</h3>
+                    <p class="role">Product Manager</p>
+                    <span class="category-tag tag-lead">Leadership</span>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&auto=format&fit=crop&q=80" alt="James Wilson" onerror="this.onerror=null; this.src='../../assignments/assets/dragon-ball.jpg';">
+                    </div>
+                    <h3>James Wilson</h3>
+                    <p class="role">DevOps Specialist</p>
+                    <span class="category-tag tag-tech">Engineering</span>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80" alt="Aaliyah Khan" onerror="this.onerror=null; this.src='../../assignments/assets/death-note.jpg';">
+                    </div>
+                    <h3>Aaliyah Khan</h3>
+                    <p class="role">Brand &amp; Visual Lead</p>
+                    <span class="category-tag tag-design">Design</span>
+                </div>
+
+                <div class="team-member-card">
+                    <div class="avatar-ring">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80" alt="Liam Miller" onerror="this.onerror=null; this.src='../../assignments/assets/one-piece.jpg';">
+                    </div>
+                    <h3>Liam Miller</h3>
+                    <p class="role">Head of Engineering</p>
+                    <span class="category-tag tag-lead">Leadership</span>
                 </div>
             </div>
         </section>

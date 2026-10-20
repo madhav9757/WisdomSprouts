@@ -45,7 +45,6 @@ body {
     margin-bottom: 0.75rem;
 }
 
-/* Card frame holding each navbar mockup */
 .card-frame {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -62,7 +61,6 @@ body {
     max-width: 440px;
 }
 
-/* Base Flex Navbar styling */
 .flex-navbar {
     background-color: #ff3c00;
     padding: 12px 18px;
@@ -99,7 +97,6 @@ body {
     opacity: 0.85;
 }
 
-/* Search form */
 .search-form {
     display: flex;
     align-items: center;
@@ -133,17 +130,11 @@ body {
     background-color: #f3f4f6;
 }
 
-/* =========================================
-   1. STATIC WIDE SPECIFICATION
-   ========================================= */
 .navbar-wide {
     flex-direction: row;
     justify-content: space-between;
 }
 
-/* =========================================
-   2. STATIC NARROW SPECIFICATION
-   ========================================= */
 .navbar-narrow {
     flex-direction: column;
     align-items: stretch;
@@ -164,9 +155,6 @@ body {
     width: auto;
 }
 
-/* =========================================
-   3. DYNAMIC LIVE RESPONSIVE NAVBAR
-   ========================================= */
 .live-navbar {
     flex-wrap: wrap;
 }

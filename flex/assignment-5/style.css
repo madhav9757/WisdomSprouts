@@ -33,9 +33,6 @@ body {
     color: #94a3b8;
 }
 
-/* =========================================
-   SHOWCASE SECTION (matching YouTube banner)
-   ========================================= */
 .devices-showcase {
     background-color: #000000;
     border-radius: 8px;
@@ -69,7 +66,6 @@ body {
     margin-top: 4px;
 }
 
-/* 3 Devices Row */
 .devices-row {
     display: flex;
     justify-content: center;
@@ -92,7 +88,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Common block styles */
 .block {
     display: flex;
     align-items: center;
@@ -135,7 +130,6 @@ body {
     width: 100%;
 }
 
-/* 1. DESKTOP MOCKUP */
 .desktop-mock {
     width: 380px;
     background-color: #ffffff;
@@ -166,7 +160,6 @@ body {
     flex: 1;
 }
 
-/* 2. TABLET MOCKUP */
 .tablet-mock {
     width: 270px;
     background-color: #ffffff;
@@ -201,7 +194,6 @@ body {
     height: 40px;
 }
 
-/* 3. MOBILE MOCKUP */
 .mobile-mock {
     width: 180px;
     background-color: #ffffff;
@@ -229,9 +221,6 @@ body {
     height: 34px;
 }
 
-/* =========================================
-   LIVE ADAPTIVE IMPLEMENTATION
-   ========================================= */
 .live-implementation {
     background-color: #1f2937;
     border: 1px solid #374151;
@@ -280,7 +269,6 @@ body {
     line-height: 1.55;
 }
 
-/* Tablet Media Query (below 900px) */
 @media (max-width: 900px) {
     .live-content-wrapper {
         flex-wrap: wrap;
@@ -304,7 +292,6 @@ body {
     }
 }
 
-/* Mobile Media Query (below 600px) */
 @media (max-width: 600px) {
     .live-aside1 {
         flex: 1 0 100%;

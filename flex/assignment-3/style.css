@@ -33,7 +33,6 @@ body {
     color: #374151;
 }
 
-/* Wrapper to position Desktop and Mobile side-by-side */
 .layouts-wrapper {
     display: flex;
     align-items: flex-start;
@@ -54,7 +53,6 @@ body {
     margin-bottom: 0.75rem;
 }
 
-/* Common block styles */
 .block {
     display: flex;
     align-items: center;
@@ -83,9 +81,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* =========================================
-   1. DESKTOP VIEW
-   ========================================= */
 .desktop-screen {
     width: 380px;
     background-color: #fde6e8;
@@ -137,9 +132,6 @@ body {
     height: 60px;
 }
 
-/* =========================================
-   2. MOBILE VIEW (Phone Mockup)
-   ========================================= */
 .mobile-phone {
     width: 240px;
     background-color: #fde6e8;
