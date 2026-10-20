@@ -4,180 +4,358 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fde8e9;
     color: #111827;
-    padding: 2.5rem 1.5rem;
+    padding: 16px;
     line-height: 1.5;
 }
 
-.page-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.title-section {
-    margin-bottom: 2rem;
-}
-
-.title-section h1 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.25rem;
-}
-
-.title-section p {
-    font-size: 1rem;
-    color: #374151;
-}
-
-.layouts-wrapper {
+.website-shell {
+    min-height: calc(100vh - 32px);
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.site-header {
+    background-color: #48a999;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 1.35rem;
+}
+
+.brand-title {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 1.15rem;
+}
+
+.site-nav {
+    display: flex;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.layout-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.view-label {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.75rem;
-}
-
-.block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
+.nav-link {
+    color: #e6fffa;
+    text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
 }
 
-.header-block,
-.footer-block,
-.aside-block {
-    background-color: #62b6a8;
-}
-
-.article-block {
-    background-color: #fa6e69;
-}
-
-.img-box {
-    background-color: #d1d5db;
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
+}
+
+.site-body {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.site-aside {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aside-card {
+    background-color: #48a999;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.aside-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding-bottom: 8px;
+}
+
+.ranking-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ranking-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.rank-num {
+    font-weight: 800;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: #319795;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
-.desktop-screen {
-    width: 380px;
-    background-color: #fde6e8;
-    padding: 10px;
+.rank-info {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    border: 1px solid #f8b4b8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-width: 0;
 }
 
-.desktop-screen .header-block,
-.desktop-screen .footer-block {
-    height: 32px;
+.rank-info strong {
+    font-size: 0.9rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.desktop-body {
-    display: flex;
-    gap: 8px;
-    height: 180px;
+.rank-info small {
+    font-size: 0.75rem;
+    opacity: 0.85;
 }
 
-.desktop-body .aside-block {
-    flex: 0 0 85px;
-    height: 100%;
+.banner-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.desktop-body .article-block {
+.banner-card p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    opacity: 0.95;
+}
+
+.site-article {
     flex: 1;
+    background-color: #fa6e69;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-width: 0;
 }
 
-.desktop-body .article-label {
+.category-pill {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.site-article h2 {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.article-desc {
     font-size: 0.95rem;
-    margin-top: 4px;
+    line-height: 1.6;
+    opacity: 0.95;
 }
 
-.desktop-body .images-row {
+.shonen-image-gallery {
     display: flex;
-    gap: 8px;
+    flex-direction: row;
+    gap: 14px;
     width: 100%;
 }
 
-.desktop-body .images-row .img-box {
+.character-card {
     flex: 1;
-    height: 60px;
-}
-
-.mobile-phone {
-    width: 240px;
-    background-color: #fde6e8;
-    border-radius: 20px;
-    padding: 14px 12px 18px 12px;
+    min-width: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border: 2px solid #f5c2c7;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.card-thumb {
     position: relative;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background-color: #e2e8f0;
 }
 
-.speaker-notch {
-    width: 38px;
-    height: 4px;
-    background-color: #94a3b8;
-    border-radius: 3px;
-    margin: 0 auto 6px auto;
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.mobile-phone .header-block,
-.mobile-phone .footer-block {
-    height: 34px;
+.thumb-badge {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
-.mobile-phone .mobile-article {
-    display: flex;
-    flex-direction: column;
-    padding: 12px 10px;
-    gap: 10px;
+.card-caption {
+    padding: 12px 14px;
+    text-align: left;
 }
 
-.mobile-phone .mobile-article .article-label {
-    text-align: center;
-    font-size: 0.95rem;
+.card-caption h4 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
     margin-bottom: 2px;
 }
 
-.mobile-phone .images-column {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.card-caption p {
+    font-size: 0.8rem;
+    color: #64748b;
 }
 
-.mobile-phone .images-column .img-box {
-    width: 100%;
-    height: 64px;
+.site-footer {
+    background-color: #48a999;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 900px) {
+    .site-aside {
+        flex: 0 0 210px;
+    }
+
+    .card-thumb {
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .website-shell {
+        min-height: auto;
+    }
+
+    .site-body {
+        flex-direction: column;
+    }
+
+    .site-aside {
+        display: none;
+    }
+
+    .site-article {
+        padding: 18px;
+    }
+
+    .shonen-image-gallery {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-thumb {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .site-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .site-article {
+        padding: 14px;
+    }
+
+    .card-thumb {
+        height: 150px;
+    }
+
+    .site-footer {
+        font-size: 0.78rem;
+        padding: 10px;
+    }
 }
