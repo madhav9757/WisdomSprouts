@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Assignment 2</title>
+    <title>Assignment 2 - Circular Image Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="assignment-header">
-        <h1>Flexbox Assignment 2</h1>
-        <p class="subtitle">Wisdom Sprouts - CSS Flexbox Practice</p>
-    </header>
 
-    <main class="assignment-container">
-        <section class="task-card">
-            <h2>Task Overview</h2>
-            <p>Ready for assignment instructions and flexbox layout implementation.</p>
+    <main class="page-container">
+        <header class="title-section">
+            <h1>Assignment 2</h1>
+            <p>create image gallery</p>
+        </header>
+
+        <section class="gallery-wrapper">
+            <div class="gallery-container">
+                <!-- Row 1 -->
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&auto=format&fit=crop&q=80" alt="Beach chairs and shack" onerror="this.onerror=null; this.src='../../assignments/assets/605599.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1572293007244-8b60335d2b7d?w=400&auto=format&fit=crop&q=80" alt="Street hydrant and asphalt" onerror="this.onerror=null; this.src='../../assignments/assets/7423411.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&auto=format&fit=crop&q=80" alt="Pier over the water" onerror="this.onerror=null; this.src='../../assignments/assets/Kirito_Minimal.png';">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?w=400&auto=format&fit=crop&q=80" alt="Town overview and greenery" onerror="this.onerror=null; this.src='../../assignments/assets/asta.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&auto=format&fit=crop&q=80" alt="Motel facade with balcony" onerror="this.onerror=null; this.src='../../assignments/assets/death-note.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop&q=80" alt="Outdoor cafe patio" onerror="this.onerror=null; this.src='../../assignments/assets/dragon-ball.jpg';">
+                </div>
+
+                <!-- Row 3 -->
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=400&auto=format&fit=crop&q=80" alt="Wooden pier pilings" onerror="this.onerror=null; this.src='../../assignments/assets/ichigo.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400&auto=format&fit=crop&q=80" alt="Birds perched on street poles" onerror="this.onerror=null; this.src='../../assignments/assets/itadori.jpg';">
+                </div>
+                <div class="circle-card">
+                    <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=400&auto=format&fit=crop&q=80" alt="Cold drink water cooler" onerror="this.onerror=null; this.src='../../assignments/assets/sukuna.jpg';">
+                </div>
+            </div>
         </section>
     </main>
+
 </body>
 </html>

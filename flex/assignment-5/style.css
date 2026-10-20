@@ -5,59 +5,312 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
-    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #111827;
+    color: #f3f4f6;
+    padding: 2.5rem 1.5rem;
+    line-height: 1.5;
+}
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title-section {
+    margin-bottom: 2rem;
+}
+
+.title-section h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.title-section p {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+/* =========================================
+   SHOWCASE SECTION (matching YouTube banner)
+   ========================================= */
+.devices-showcase {
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 28px 24px 36px 24px;
+    border: 1px solid #262626;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    margin-bottom: 3rem;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.showcase-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.showcase-header .highlight {
+    color: #ff5252;
+}
+
+.showcase-header .sub {
+    display: block;
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* 3 Devices Row */
+.devices-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.device-column {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 14px;
 }
 
-.assignment-header {
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-bottom: 1px solid #334155;
-    padding: 2rem 1.5rem;
-    text-align: center;
+.device-tag {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
-.assignment-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #38bdf8;
-    margin-bottom: 0.5rem;
+/* Common block styles */
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
 }
 
-.assignment-header .subtitle {
-    color: #94a3b8;
+.header-block {
+    background-color: #fa5252;
+    color: #1a1a1a;
+    width: 100%;
+}
+
+.aside1-block {
+    background-color: #ffd600;
+    color: #1a1a1a;
+}
+
+.main-block {
+    background-color: #00c2cb;
+    color: #052e36;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    padding: 10px;
+}
+
+.aside2-block {
+    background-color: #ff55a3;
+    color: #1a1a1a;
+}
+
+.footer-block {
+    background-color: #86efac;
+    color: #1a1a1a;
+    width: 100%;
+}
+
+/* 1. DESKTOP MOCKUP */
+.desktop-mock {
+    width: 380px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.desktop-mock .header-block,
+.desktop-mock .footer-block {
+    height: 48px;
+}
+
+.desktop-main-row {
+    display: flex;
+    gap: 8px;
+    min-height: 160px;
+}
+
+.desktop-main-row .aside1-block,
+.desktop-main-row .aside2-block {
+    flex: 0 0 74px;
+}
+
+.desktop-main-row .main-block {
+    flex: 1;
+}
+
+/* 2. TABLET MOCKUP */
+.tablet-mock {
+    width: 270px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tablet-mock .tablet-header {
+    height: 38px;
+}
+
+.tablet-mock .tablet-main {
+    min-height: 140px;
+}
+
+.tablet-asides-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.tablet-asides-row .aside1-block,
+.tablet-asides-row .aside2-block {
+    flex: 1;
+    height: 36px;
+}
+
+.tablet-mock .footer-block {
+    height: 40px;
+}
+
+/* 3. MOBILE MOCKUP */
+.mobile-mock {
+    width: 180px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-mock .header-block {
+    height: 42px;
+}
+
+.mobile-mock .mobile-main {
+    font-size: 0.65rem;
+    min-height: 120px;
+}
+
+.mobile-mock .mobile-aside {
+    height: 34px;
+}
+
+.mobile-mock .footer-block {
+    height: 34px;
+}
+
+/* =========================================
+   LIVE ADAPTIVE IMPLEMENTATION
+   ========================================= */
+.live-implementation {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.live-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 1.25rem;
+}
+
+.live-layout-container {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.live-layout-container .header-block,
+.live-layout-container .footer-block {
+    height: 52px;
     font-size: 1rem;
 }
 
-.assignment-container {
-    flex: 1;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+.live-content-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 12px;
 }
 
-.task-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+.live-aside1,
+.live-aside2 {
+    flex: 0 0 130px;
+    font-size: 0.95rem;
 }
 
-.task-card h2 {
-    color: #f1f5f9;
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+.live-main {
+    flex: 1;
+    font-size: 0.95rem;
+    padding: 18px;
+    line-height: 1.55;
 }
 
-.task-card p {
-    color: #94a3b8;
-    line-height: 1.6;
+/* Tablet Media Query (below 900px) */
+@media (max-width: 900px) {
+    .live-content-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .live-main {
+        order: 1;
+        flex: 1 0 100%;
+    }
+
+    .live-aside1 {
+        order: 2;
+        flex: 1;
+        height: 46px;
+    }
+
+    .live-aside2 {
+        order: 3;
+        flex: 1;
+        height: 46px;
+    }
+}
+
+/* Mobile Media Query (below 600px) */
+@media (max-width: 600px) {
+    .live-aside1 {
+        flex: 1 0 100%;
+    }
+
+    .live-aside2 {
+        flex: 1 0 100%;
+    }
 }

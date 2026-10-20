@@ -3,24 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Assignment 1</title>
+    <title>Assignment 1 - Flexbox Practice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="assignment-header">
-        <h1>Flexbox Assignment 1</h1>
-        <p class="subtitle">Wisdom Sprouts - CSS Flexbox Practice</p>
-    </header>
 
-    <main class="assignment-container">
-        <!-- Assignment 1 content starts here -->
-        <section class="task-card">
-            <h2>Task Overview</h2>
-            <p>Ready for assignment instructions and flexbox layout implementation.</p>
+    <main class="page-container">
+        <header class="title-section">
+            <h1>Assignment 1</h1>
+            <p>Create code using flex</p>
+        </header>
+
+        <!-- Case 1 -->
+        <section class="exercise">
+            <span class="exercise-number">1.</span>
+            <div class="flex-container case-1">
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">This is some longer content</div>
+                <div class="item blue-item">child</div>
+            </div>
+        </section>
+
+        <!-- Case 2 -->
+        <section class="exercise">
+            <span class="exercise-number">2.</span>
+            <div class="flex-container case-2">
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+            </div>
+        </section>
+
+        <!-- Case 3 -->
+        <section class="exercise">
+            <span class="exercise-number">3.</span>
+            <div class="flex-container case-3">
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+                <div class="item green-item">child</div>
+            </div>
+        </section>
+
+        <!-- Case 4 -->
+        <section class="exercise">
+            <span class="exercise-number">4.</span>
+            <div class="flex-container case-4">
+                <div class="item blue-item shrink-0">child</div>
+                <div class="item blue-item grow-content">Now this is a lot of content that goes here and to be honest we should be wary of changes.</div>
+                <div class="item green-item shrink-0">child</div>
+            </div>
+        </section>
+
+        <!-- Case 5 -->
+        <section class="exercise">
+            <span class="exercise-number">5.</span>
+            <div class="flex-container case-5">
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+            </div>
+        </section>
+
+        <!-- Case 6 -->
+        <section class="exercise">
+            <span class="exercise-number">6.</span>
+            <div class="flex-container case-6">
+                <div class="item blue-item">child</div>
+                <div class="item blue-item">child</div>
+                <div class="item orange-item grow-item">child</div>
+            </div>
+        </section>
+
+        <!-- Case 7 -->
+        <section class="exercise">
+            <span class="exercise-number">7.</span>
+            <div class="flex-container case-7">
+                <div class="item blue-item col-left">
+                    <span class="sub-label">child</span>
+                    <p>And this is a lot of content, okay? Okay? And this is a lot of content, okay? Okay? And this is a lot of content, okay? Okay?</p>
+                </div>
+                <div class="item orange-item col-right">
+                    child
+                </div>
+            </div>
+        </section>
+
+        <!-- Case 8 -->
+        <section class="exercise">
+            <span class="exercise-number">8.</span>
+            <div class="flex-container case-8">
+                <div class="item blue-item top-item">child</div>
+                <div class="item blue-item top-item">child</div>
+                <div class="item orange-item bottom-full">child</div>
+            </div>
         </section>
     </main>
+
 </body>
 </html>

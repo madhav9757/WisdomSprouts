@@ -3,23 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Assignment 3</title>
+    <title>Assignment 3 - Responsive Flexbox Layout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="assignment-header">
-        <h1>Flexbox Assignment 3</h1>
-        <p class="subtitle">Wisdom Sprouts - CSS Flexbox Practice</p>
-    </header>
 
-    <main class="assignment-container">
-        <section class="task-card">
-            <h2>Task Overview</h2>
-            <p>Ready for assignment instructions and flexbox layout implementation.</p>
+    <main class="page-container">
+        <header class="title-section">
+            <h1>Assignment 3</h1>
+            <p>Responsive Layout: Desktop & Mobile Flexbox</p>
+        </header>
+
+        <section class="layouts-wrapper">
+            <!-- Left: Desktop View -->
+            <div class="layout-card desktop-card">
+                <h3 class="view-label">Desktop View</h3>
+                <div class="desktop-screen">
+                    <header class="block header-block">Header</header>
+
+                    <div class="desktop-body">
+                        <aside class="block aside-block">Aside</aside>
+
+                        <article class="block article-block">
+                            <span class="article-label">Article</span>
+                            <div class="images-row">
+                                <div class="img-box">Image</div>
+                                <div class="img-box">Image</div>
+                                <div class="img-box">Image</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <footer class="block footer-block">Footer</footer>
+                </div>
+            </div>
+
+            <!-- Right: Mobile View (Phone Frame) -->
+            <div class="layout-card mobile-card">
+                <h3 class="view-label">Mobile View</h3>
+                <div class="mobile-phone">
+                    <div class="speaker-notch"></div>
+
+                    <header class="block header-block">Header</header>
+
+                    <article class="block article-block mobile-article">
+                        <span class="article-label">Article</span>
+                        <div class="images-column">
+                            <div class="img-box">Image</div>
+                            <div class="img-box">Image</div>
+                            <div class="img-box">Image</div>
+                        </div>
+                    </article>
+
+                    <footer class="block footer-block">Footer</footer>
+                </div>
+            </div>
         </section>
     </main>
+
 </body>
 </html>

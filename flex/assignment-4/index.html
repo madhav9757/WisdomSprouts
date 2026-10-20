@@ -3,23 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Assignment 4</title>
+    <title>Assignment 4 - Responsive Flexbox Navbar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="assignment-header">
-        <h1>Flexbox Assignment 4</h1>
-        <p class="subtitle">Wisdom Sprouts - CSS Flexbox Practice</p>
-    </header>
 
-    <main class="assignment-container">
-        <section class="task-card">
-            <h2>Task Overview</h2>
-            <p>Ready for assignment instructions and flexbox layout implementation.</p>
+    <main class="page-container">
+        <header class="title-section">
+            <h1>Assignment 4</h1>
+            <p>Responsive Flexbox Navigation Bar</p>
+        </header>
+
+        <!-- Demonstration 1: Wide screens view -->
+        <section class="demo-section">
+            <h3 class="screen-label">Navbar on wide screens</h3>
+            <div class="card-frame wide-card">
+                <nav class="flex-navbar navbar-wide">
+                    <div class="nav-links">
+                        <a href="#" class="brand-logo">Logo</a>
+                        <a href="#" class="nav-item">Home</a>
+                        <a href="#" class="nav-item">Products</a>
+                        <a href="#" class="nav-item">Services</a>
+                    </div>
+                    <form class="search-form" onsubmit="return false;">
+                        <input type="text" placeholder="Search" aria-label="Search">
+                        <button type="submit">Go</button>
+                    </form>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Demonstration 2: Narrow screens view -->
+        <section class="demo-section">
+            <h3 class="screen-label">Navbar on narrow screens</h3>
+            <div class="card-frame narrow-card">
+                <nav class="flex-navbar navbar-narrow">
+                    <div class="nav-links">
+                        <a href="#" class="brand-logo">Logo</a>
+                        <a href="#" class="nav-item">Home</a>
+                        <a href="#" class="nav-item">Products</a>
+                        <a href="#" class="nav-item">Services</a>
+                    </div>
+                    <form class="search-form" onsubmit="return false;">
+                        <input type="text" placeholder="Search" aria-label="Search">
+                        <button type="submit">Go</button>
+                    </form>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Interactive Live Navbar that adapts dynamically -->
+        <section class="demo-section live-demo">
+            <h3 class="screen-label">Live Interactive Responsive Navbar (Resize Browser to Test)</h3>
+            <div class="card-frame">
+                <nav class="flex-navbar live-navbar">
+                    <div class="nav-links">
+                        <a href="#" class="brand-logo">Logo</a>
+                        <a href="#" class="nav-item">Home</a>
+                        <a href="#" class="nav-item">Products</a>
+                        <a href="#" class="nav-item">Services</a>
+                    </div>
+                    <form class="search-form" onsubmit="return false;">
+                        <input type="text" placeholder="Search" aria-label="Search">
+                        <button type="submit">Go</button>
+                    </form>
+                </nav>
+            </div>
         </section>
     </main>
+
 </body>
 </html>

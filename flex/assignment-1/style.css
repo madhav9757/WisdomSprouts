@@ -5,59 +5,176 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #0f172a;
-    color: #f8fafc;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111827;
+    padding: 2.5rem 1.5rem;
+    line-height: 1.5;
 }
 
-.assignment-header {
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-bottom: 1px solid #334155;
-    padding: 2rem 1.5rem;
-    text-align: center;
-}
-
-.assignment-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #38bdf8;
-    margin-bottom: 0.5rem;
-}
-
-.assignment-header .subtitle {
-    color: #94a3b8;
-    font-size: 1rem;
-}
-
-.assignment-container {
-    flex: 1;
-    max-width: 1200px;
-    width: 100%;
+.page-container {
+    max-width: 860px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+}
+
+.title-section {
+    margin-bottom: 2rem;
+}
+
+.title-section h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.title-section p {
+    font-size: 1rem;
+    color: #374151;
+}
+
+.exercise {
+    margin-bottom: 2rem;
+}
+
+.exercise-number {
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+/* Outer dark container for each flex test case */
+.flex-container {
+    background-color: #031b33;
+    padding: 14px;
     display: flex;
+    width: 100%;
+    min-height: 64px;
+    border-radius: 2px;
+}
+
+/* Base flex item styles */
+.item {
+    color: #ffffff;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.blue-item {
+    background-color: #0074d9;
+}
+
+.green-item {
+    background-color: #2e8b57;
+}
+
+.orange-item {
+    background-color: #ff7700;
+}
+
+/* Case 1: items take content width and sit on left */
+.case-1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.case-1 .item {
+    flex: 0 0 auto;
+}
+
+/* Case 2: 3 equal blue items filling container */
+.case-2 .item {
+    flex: 1;
+}
+
+/* Case 3: 2 blue items (flex 1) + 1 green item taking half (flex 2) */
+.case-3 .blue-item {
+    flex: 1;
+}
+
+.case-3 .green-item {
+    flex: 2;
+}
+
+/* Case 4: item 1 fixed, item 2 grows with text, item 3 green fixed */
+.case-4 .shrink-0 {
+    flex: 0 0 auto;
+    min-width: 75px;
+}
+
+.case-4 .grow-content {
+    flex: 1;
+}
+
+/* Case 5: 3 small items grouped on left without stretching */
+.case-5 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.case-5 .item {
+    flex: 0 0 auto;
+    min-width: 75px;
+}
+
+/* Case 6: 2 small blue items on left, orange item grows across remaining space */
+.case-6 .blue-item {
+    flex: 0 0 auto;
+    min-width: 75px;
+}
+
+.case-6 .grow-item {
+    flex: 1;
+}
+
+/* Case 7: Left blue item has text, right orange item stretches across cross-axis */
+.case-7 {
+    display: flex;
+    align-items: stretch;
+}
+
+.case-7 .col-left {
+    flex: 1.2;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 18px 24px;
 }
 
-.task-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+.case-7 .col-left .sub-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
-.task-card h2 {
-    color: #f1f5f9;
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+.case-7 .col-left p {
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.task-card p {
-    color: #94a3b8;
-    line-height: 1.6;
+.case-7 .col-right {
+    flex: 0.8;
+}
+
+/* Case 8: Wrapping items - top row has 2 blue items, bottom row has full-width orange item */
+.case-8 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case-8 .top-item {
+    flex: 0 0 auto;
+    min-width: 90px;
+}
+
+.case-8 .bottom-full {
+    flex: 1 0 100%;
 }
