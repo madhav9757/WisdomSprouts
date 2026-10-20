@@ -5,176 +5,467 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #ffffff;
-    color: #111827;
-    padding: 2.5rem 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 2.5rem 1.25rem;
     line-height: 1.5;
 }
 
 .page-container {
-    max-width: 860px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.title-section {
+/* Header */
+.page-header {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     margin-bottom: 2rem;
 }
 
-.title-section h1 {
+.page-header .badge {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.page-header h1 {
     font-size: 1.85rem;
     font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.25rem;
-}
-
-.title-section p {
-    font-size: 1rem;
-    color: #374151;
-}
-
-.exercise {
-    margin-bottom: 2rem;
-}
-
-.exercise-number {
-    display: block;
-    font-weight: 600;
-    font-size: 1.05rem;
+    color: #0f172a;
     margin-bottom: 0.5rem;
-    color: #111827;
 }
 
-/* Outer dark container for each flex test case */
-.flex-container {
+.page-header p {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+/* Exercise Card */
+.exercise-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exercise-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.exercise-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+}
+
+.case-number {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0284c7;
+    line-height: 1;
+}
+
+.case-info h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.35rem;
+}
+
+.case-info code {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.82rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Dark Preview Canvas (Replicating Assignment 1 dark container) */
+.flex-preview-box {
     background-color: #031b33;
+    padding: 18px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* ========================================================
+   CASE 1: Category Filter Chips (Content Sizing: flex: 0 0 auto)
+   ======================================================== */
+.chip-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.chip {
+    flex: 0 0 auto; /* Keeps item at intrinsic content size */
+    background-color: #0074d9;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chip:hover {
+    background-color: #0056b3;
+}
+
+.chip-active {
+    background-color: #0056b3;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+/* ========================================================
+   CASE 2: Dashboard Metrics Bar (Equal Share: flex: 1)
+   ======================================================== */
+.metrics-grid {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.metric-item {
+    flex: 1; /* All 3 take exactly 33.33% of the container */
+    background-color: #0074d9;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
     padding: 14px;
     display: flex;
-    width: 100%;
-    min-height: 64px;
-    border-radius: 2px;
-}
-
-/* Base flex item styles */
-.item {
-    color: #ffffff;
-    padding: 12px 18px;
-    font-size: 0.95rem;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.blue-item {
-    background-color: #0074d9;
+.metric-label {
+    color: #bae6fd;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.green-item {
-    background-color: #2e8b57;
+.metric-value {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
-.orange-item {
-    background-color: #ff7700;
-}
-
-/* Case 1: items take content width and sit on left */
-.case-1 {
+/* ========================================================
+   CASE 3: Checkout Form Row (Proportional Growth: flex: 1 vs flex: 2)
+   ======================================================== */
+.form-row {
     display: flex;
-    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    align-items: flex-end;
 }
 
-.case-1 .item {
-    flex: 0 0 auto;
-}
-
-/* Case 2: 3 equal blue items filling container */
-.case-2 .item {
-    flex: 1;
-}
-
-/* Case 3: 2 blue items (flex 1) + 1 green item taking half (flex 2) */
-.case-3 .blue-item {
-    flex: 1;
-}
-
-.case-3 .green-item {
-    flex: 2;
-}
-
-/* Case 4: item 1 fixed, item 2 grows with text, item 3 green fixed */
-.case-4 .shrink-0 {
-    flex: 0 0 auto;
-    min-width: 75px;
-}
-
-.case-4 .grow-content {
-    flex: 1;
-}
-
-/* Case 5: 3 small items grouped on left without stretching */
-.case-5 {
+.input-group {
     display: flex;
-    justify-content: flex-start;
-}
-
-.case-5 .item {
-    flex: 0 0 auto;
-    min-width: 75px;
-}
-
-/* Case 6: 2 small blue items on left, orange item grows across remaining space */
-.case-6 .blue-item {
-    flex: 0 0 auto;
-    min-width: 75px;
-}
-
-.case-6 .grow-item {
-    flex: 1;
-}
-
-/* Case 7: Left blue item has text, right orange item stretches across cross-axis */
-.case-7 {
-    display: flex;
-    align-items: stretch;
-}
-
-.case-7 .col-left {
-    flex: 1.2;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    padding: 18px 24px;
+    gap: 6px;
 }
 
-.case-7 .col-left .sub-label {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+.input-group label {
+    color: #e2e8f0;
+    font-size: 0.82rem;
     font-weight: 500;
 }
 
-.case-7 .col-left p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+.input-group input {
+    background-color: #0074d9;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
 }
 
-.case-7 .col-right {
-    flex: 0.8;
+.input-group.flex-1 {
+    flex: 1; /* Standard share */
 }
 
-/* Case 8: Wrapping items - top row has 2 blue items, bottom row has full-width orange item */
-.case-8 {
+.input-group.flex-2 {
+    flex: 2; /* Double share (green item from image) */
+}
+
+.input-group.accent-green input {
+    background-color: #2e8b57;
+}
+
+/* ========================================================
+   CASE 4: Dynamic Center Expansion with Fixed Sides
+   ======================================================== */
+.search-bar-row {
     display: flex;
-    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
 }
 
-.case-8 .top-item {
+.fixed-btn {
+    flex: 0 0 auto; /* Never shrink or expand */
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-btn {
+    background-color: #0074d9;
+}
+
+.action-green-btn {
+    background-color: #2e8b57;
+}
+
+.search-input-wrapper {
+    flex: 1; /* Absorbs long input and spans remaining space */
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    background-color: #0074d9;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* ========================================================
+   CASE 5: Non-Growing Grouped Elements (flex-grow: 0)
+   ======================================================== */
+.media-controls-row {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.control-btn {
     flex: 0 0 auto;
-    min-width: 90px;
+    width: 85px;
+    background-color: #0074d9;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
 }
 
-.case-8 .bottom-full {
-    flex: 1 0 100%;
+.control-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ========================================================
+   CASE 6: Last Item Expanding across Remaining Width
+   ======================================================== */
+.status-banner-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-pill {
+    flex: 0 0 auto; /* Stays compact */
+    background-color: #0074d9;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+}
+
+.orange-status-banner {
+    flex: 1; /* Grows across all remaining space (orange item from image) */
+    background-color: #ff7700;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+/* ========================================================
+   CASE 7: Equal Height Columns (align-items: stretch)
+   ======================================================== */
+.split-card-row {
+    display: flex;
+    align-items: stretch; /* Cross-axis stretch makes both columns equal height */
+    gap: 12px;
+    width: 100%;
+}
+
+.split-content-col {
+    flex: 1.4;
+    background-color: #0074d9;
+    color: #ffffff;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.col-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.split-content-col h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.split-content-col p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #e2e8f0;
+}
+
+.split-action-col {
+    flex: 0.8;
+    background-color: #ff7700;
+    color: #ffffff;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.action-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.enroll-btn {
+    background-color: #ffffff;
+    color: #ff7700;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.enroll-btn:hover {
+    background-color: #f8fafc;
+}
+
+/* ========================================================
+   CASE 8: Multi-Line Wrapping (flex-wrap: wrap)
+   ======================================================== */
+.wrapping-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to break to next line */
+    gap: 10px;
+    width: 100%;
+}
+
+.meta-tag {
+    flex: 0 0 auto;
+    background-color: #0074d9;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.full-width-orange-alert {
+    flex: 1 0 100%; /* Forces 100% width on second row */
+    background-color: #ff7700;
+    color: #ffffff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 680px) {
+    .metrics-grid,
+    .form-row,
+    .split-card-row,
+    .search-bar-row,
+    .status-banner-row {
+        flex-direction: column;
+    }
+
+    .chip-group {
+        flex-wrap: wrap;
+    }
+
+    .search-input-wrapper {
+        width: 100%;
+    }
+
+    .fixed-btn {
+        width: 100%;
+    }
 }
