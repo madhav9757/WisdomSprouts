@@ -3,92 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 6 - Sample Flexbox Example</title>
+    <title>Assignment 6 - Responsive Articles Layout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="page-container">
-        <header class="title-section">
-            <h1>Assignment 6</h1>
-            <p>Responsive Flexbox Layout: Mobile vs Laptop View</p>
+    <div class="layout-container">
+        <header class="main-header">
+            <div class="brand">
+                <span class="brand-icon">&#9889;</span>
+                <span class="brand-name">SHONEN CHRONICLES</span>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">&#128293; Featured</a>
+                <a href="#" class="nav-item">&#128218; Archives</a>
+                <a href="#" class="nav-item">&#127942; Top Rated</a>
+                <a href="#" class="nav-item">&#129504; Theory</a>
+            </nav>
+
+            <div class="header-action">
+                <button class="subscribe-btn">&#128276; Subscribe</button>
+            </div>
         </header>
 
-        <section class="demo-section">
-            <h3 class="view-heading">Mobile View:</h3>
-            <div class="mobile-frame">
-                <header class="purple-header">Sample flexbox example</header>
-                <div class="articles-column">
-                    <article class="cyan-article">
-                        <h2>First article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
-
-                    <article class="cyan-article">
-                        <h2>Second article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
-
-                    <article class="cyan-article">
-                        <h2>Third article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
-                    </article>
-                </div>
+        <section class="intro-bar">
+            <div class="intro-meta">
+                <span class="badge">&#128065; Curated Analyses</span>
+                <h1>Editorial Spotlight: Three Masterworks of Shonen Storytelling</h1>
             </div>
+            <p class="intro-desc">A deep dive into three foundational pillars of modern manga: supernatural combat, dark fantasy mechanics, and psychological tension.</p>
         </section>
 
-        <section class="demo-section">
-            <h3 class="view-heading">Laptop View:</h3>
-            <div class="laptop-frame">
-                <header class="purple-header">Sample flexbox example</header>
-                <div class="articles-row">
-                    <article class="cyan-article">
-                        <h2>First article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
-
-                    <article class="cyan-article">
-                        <h2>Second article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
-
-                    <article class="cyan-article">
-                        <h2>Third article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
-                    </article>
+        <main class="articles-container">
+            <article class="article-card">
+                <div class="card-thumb">
+                    <img src="assets/ichigo.jpg" alt="Ichigo Kurosaki">
+                    <span class="thumb-badge">&#9876; Supernatural</span>
                 </div>
-            </div>
-        </section>
 
-        <section class="demo-section live-section">
-            <h3 class="view-heading">Live Dynamic Responsive View (Resize Window):</h3>
-            <div class="live-flex-wrapper">
-                <header class="purple-header">Sample flexbox example</header>
-                <div class="live-articles">
-                    <article class="cyan-article">
-                        <h2>First article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
+                <div class="card-body">
+                    <div class="meta-row">
+                        <span class="read-time">&#9201; 5 min read</span>
+                        <span class="rating">&#11088; 4.9</span>
+                    </div>
 
-                    <article class="cyan-article">
-                        <h2>Second article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                    </article>
-
-                    <article class="cyan-article">
-                        <h2>Third article</h2>
-                        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-                        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
-                    </article>
+                    <h2>Bleach: Spiritual Blades &amp; High Fashion in Combat</h2>
+                    <p>Tite Kubo revolutionized the visual grammar of Shonen with poetic chapter titles, high-contrast character silhouettes, and the definitive Bankai mechanic.</p>
                 </div>
+
+                <div class="card-footer">
+                    <span class="author-tag">By Alex Thorne</span>
+                    <a href="#" class="read-link">Read Story &rarr;</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-thumb">
+                    <img src="assets/sukuna.jpg" alt="Ryomen Sukuna">
+                    <span class="thumb-badge">&#128302; Dark Fantasy</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="meta-row">
+                        <span class="read-time">&#9201; 7 min read</span>
+                        <span class="rating">&#11088; 4.95</span>
+                    </div>
+
+                    <h2>Jujutsu Kaisen: The Architecture of Domain Expansions</h2>
+                    <p>Gege Akutami subverted conventional battle mechanics through rigid binding vows, mathematical cursed techniques, and high-consequence lethality.</p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="author-tag">By Maya Lin</span>
+                    <a href="#" class="read-link">Read Story &rarr;</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-thumb">
+                    <img src="assets/death-note.jpg" alt="Light Yagami">
+                    <span class="thumb-badge">&#9878; Psychological</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="meta-row">
+                        <span class="read-time">&#9201; 9 min read</span>
+                        <span class="rating">&#11088; 5.0</span>
+                    </div>
+
+                    <h2>Death Note: Psychological Warfare &amp; Moral Duality</h2>
+                    <p>How a supernatural notebook transformed into one of the most intellectually thrilling cat-and-mouse conflicts in modern popular fiction.</p>
+                </div>
+
+                <div class="card-footer">
+                    <span class="author-tag">By Kenji Sato</span>
+                    <a href="#" class="read-link">Read Story &rarr;</a>
+                </div>
+            </article>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-brand">
+                <span class="brand-icon">&#9889;</span>
+                <span>SHONEN CHRONICLES &bull; Wisdom Sprouts IT Training</span>
             </div>
-        </section>
-    </main>
+            <div class="footer-links">
+                <a href="#">Editorial Policy</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Community</a>
+                <a href="#">RSS Feed</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
