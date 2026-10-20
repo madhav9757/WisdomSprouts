@@ -3,115 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shonen Spotlight - Responsive Layout</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Shonen Anime Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="website-shell">
-        <header class="site-header">
-            <div class="brand">
-                <span class="brand-icon">&#9879;</span>
-                <span class="brand-title">SHONEN SPOTLIGHT</span>
-            </div>
-            <nav class="site-nav">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#" class="nav-link">Characters</a>
-                <a href="#" class="nav-link">Rankings</a>
+    <div class="layout-container">
+        <header class="main-header">
+            <div class="header-logo">Shonen Hub</div>
+            <nav class="header-nav">
+                <a href="#">Home</a>
+                <a href="#">Characters</a>
+                <a href="#">About</a>
             </nav>
         </header>
 
-        <div class="site-body">
-            <aside class="site-aside">
-                <div class="aside-card">
-                    <h3>Trending Series</h3>
-                    <ul class="ranking-list">
-                        <li>
-                            <span class="rank-num">1</span>
-                            <div class="rank-info">
-                                <strong>One Piece</strong>
-                                <small>Eiichiro Oda</small>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="rank-num">2</span>
-                            <div class="rank-info">
-                                <strong>Naruto</strong>
-                                <small>Masashi Kishimoto</small>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="rank-num">3</span>
-                            <div class="rank-info">
-                                <strong>Bleach</strong>
-                                <small>Tite Kubo</small>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="rank-num">4</span>
-                            <div class="rank-info">
-                                <strong>Dragon Ball</strong>
-                                <small>Akira Toriyama</small>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="aside-card banner-card">
-                    <h4>Special Feature</h4>
-                    <p>Discover the history of Shonen Jump and how weekly serialization transformed global pop culture.</p>
-                </div>
+        <div class="main-body">
+            <aside class="sidebar">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li>Shonen Action</li>
+                    <li>Supernatural</li>
+                    <li>Adventure</li>
+                    <li>Martial Arts</li>
+                    <li>Classic Heroes</li>
+                </ul>
             </aside>
 
-            <article class="site-article">
-                <div class="article-meta">
-                    <span class="category-pill">Feature Story</span>
-                    <h2>The Legendary Big Three: Heroes of an Era</h2>
-                    <p class="article-desc">Throughout the early 2000s, Shonen Jump was dominated by three cultural titans that introduced millions worldwide to anime storytelling, heartfelt rivalry, and unforgettable battles.</p>
+            <article class="content-article">
+                <div class="article-text">
+                    <h2>Shonen Legends</h2>
+                    <p>Iconic warriors and heroes who never give up, inspiring millions of fans across generations.</p>
                 </div>
 
-                <div class="shonen-image-gallery">
-                    <div class="character-card">
-                        <div class="card-thumb">
-                            <img src="assets/naruto.jpg" alt="Naruto Uzumaki">
-                            <span class="thumb-badge">Ninja</span>
-                        </div>
-                        <div class="card-caption">
-                            <h4>Naruto Uzumaki</h4>
-                            <p>Hidden Leaf Village</p>
-                        </div>
+                <div class="images-container">
+                    <div class="image-card">
+                        <img src="assets/naruto.jpg" alt="Naruto Uzumaki">
+                        <div class="card-label">Naruto Uzumaki</div>
                     </div>
-
-                    <div class="character-card">
-                        <div class="card-thumb">
-                            <img src="assets/one-piece.jpg" alt="Monkey D. Luffy">
-                            <span class="thumb-badge">Pirate</span>
-                        </div>
-                        <div class="card-caption">
-                            <h4>Monkey D. Luffy</h4>
-                            <p>Straw Hat Pirates</p>
-                        </div>
+                    <div class="image-card">
+                        <img src="assets/dragon-ball.jpg" alt="Son Goku">
+                        <div class="card-label">Son Goku</div>
                     </div>
-
-                    <div class="character-card">
-                        <div class="card-thumb">
-                            <img src="assets/ichigo.jpg" alt="Ichigo Kurosaki">
-                            <span class="thumb-badge">Soul Reaper</span>
-                        </div>
-                        <div class="card-caption">
-                            <h4>Ichigo Kurosaki</h4>
-                            <p>Karakura Town</p>
-                        </div>
+                    <div class="image-card">
+                        <img src="assets/ichigo.jpg" alt="Ichigo Kurosaki">
+                        <div class="card-label">Ichigo Kurosaki</div>
                     </div>
                 </div>
             </article>
         </div>
 
-        <footer class="site-footer">
-            <p>&copy; 2026 Shonen Spotlight &bull; Wisdom Sprouts IT Training &bull; CSS Flexbox Responsive Layout</p>
+        <footer class="main-footer">
+            <p>&copy; 2026 Shonen Hub &bull; Responsive Flexbox Layout</p>
         </footer>
     </div>
 

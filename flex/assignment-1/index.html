@@ -4,198 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1 - Real-World Flexbox Applications</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Assignment 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="page-container">
-        <header class="page-header">
-            <span class="badge">Wisdom Sprouts &bull; CSS Flexbox</span>
-            <h1>Assignment 1: Real-World Flexbox Components</h1>
-            <p>Practical implementation of the 8 core Flexbox sizing, growth, shrink, and wrapping behaviors in modern
-                UI components.</p>
+    <main class="page-wrapper">
+        <header class="assignment-header">
+            <h1>CSS Flexbox Assignment</h1>
+            <p>Learn and explore CSS Flexbox layouts</p>
         </header>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">1.</span>
-                <div class="case-info">
-                    <h2>Category Filter Chips (Content Sizing)</h2>
-                    <code>flex: 0 0 auto; (items fit their content without stretching)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="chip-group">
-                    <button class="chip chip-active">All</button>
-                    <button class="chip">Web Development &amp; Modern Frameworks</button>
-                    <button class="chip">UI/UX Design</button>
-                </div>
+        <section class="task-row">
+            <span class="task-num">1.</span>
+            <div class="showcase-box case-1">
+                <div class="item blue">Home</div>
+                <div class="item blue">Welcome to Our Website</div>
+                <div class="item blue">Contact</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">2.</span>
-                <div class="case-info">
-                    <h2>Dashboard Metrics Bar (Equal 3-Way Split)</h2>
-                    <code>flex: 1; (each item expands equally to fill 100% of the container)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="metrics-grid">
-                    <div class="metric-item">
-                        <span class="metric-label">Active Users</span>
-                        <span class="metric-value">14,250</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-label">Completed Tasks</span>
-                        <span class="metric-value">1,890</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-label">Course Progress</span>
-                        <span class="metric-value">94.8%</span>
-                    </div>
-                </div>
+        <section class="task-row">
+            <span class="task-num">2.</span>
+            <div class="showcase-box case-2">
+                <div class="item blue">Dashboard</div>
+                <div class="item blue">Projects</div>
+                <div class="item blue">Settings</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">3.</span>
-                <div class="case-info">
-                    <h2>Checkout Form Fields (Proportional Ratio 1 : 1 : 2)</h2>
-                    <code>First two items flex: 1; third item flex: 2 (gets double the remaining space)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="form-row">
-                    <div class="input-group flex-1">
-                        <label>First Name</label>
-                        <input type="text" placeholder="John" value="John" readonly>
-                    </div>
-                    <div class="input-group flex-1">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Doe" value="Doe" readonly>
-                    </div>
-                    <div class="input-group flex-2 accent-green">
-                        <label>Email Address (Double Width)</label>
-                        <input type="email" placeholder="john.doe@example.com" value="john.doe@example.com" readonly>
-                    </div>
-                </div>
+        <section class="task-row">
+            <span class="task-num">3.</span>
+            <div class="showcase-box case-3">
+                <div class="item blue">HTML</div>
+                <div class="item blue">CSS</div>
+                <div class="item green">JavaScript</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">4.</span>
-                <div class="case-info">
-                    <h2>Search Bar with Fixed Flanks (Flexible Middle)</h2>
-                    <code>Sides: flex: 0 0 auto (shrink-0); Center input: flex: 1 (grows with long query)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="search-bar-row">
-                    <button class="fixed-btn filter-btn">
-                        <span>&#9776; Filters</span>
-                    </button>
-                    <div class="search-input-wrapper">
-                        <input type="text"
-                            value="Now this is a lot of content that goes here and to be honest we should be wary of changes."
-                            aria-label="Search">
-                    </div>
-                    <button class="fixed-btn action-green-btn">
-                        <span>Search</span>
-                    </button>
-                </div>
+        <section class="task-row">
+            <span class="task-num">4.</span>
+            <div class="showcase-box case-4">
+                <div class="item blue shrink-0">Logo</div>
+                <div class="item blue grow-mid">Flexbox makes it easy to create responsive layouts that adapt to
+                    different screen sizes and distribute space between elements.</div>
+                <div class="item green shrink-0">Menu</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">5.</span>
-                <div class="case-info">
-                    <h2>Playback Controls (Fixed Compact Group)</h2>
-                    <code>flex: 0 0 auto; (buttons stay neatly clustered on the left without expanding)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="media-controls-row">
-                    <button class="control-btn" title="Previous Track">&#9198; Prev</button>
-                    <button class="control-btn" title="Play/Pause">&#9654; Play</button>
-                    <button class="control-btn" title="Next Track">&#9197; Next</button>
-                </div>
+        <section class="task-row">
+            <span class="task-num">5.</span>
+            <div class="showcase-box case-5">
+                <div class="item blue">Frontend</div>
+                <div class="item blue">Backend</div>
+                <div class="item blue">Database</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">6.</span>
-                <div class="case-info">
-                    <h2>Breadcrumb Nav + Extended Status Callout</h2>
-                    <code>Pills: flex: 0 0 auto; Orange banner: flex: 1 (fills all remaining space to the right)</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="status-banner-row">
-                    <span class="nav-pill">Wisdom Sprouts</span>
-                    <span class="nav-pill">CSS Course</span>
-                    <div class="orange-status-banner">
-                        <span>&#128279; System Status: Active Assignment 1 Environment Synchronized</span>
-                    </div>
-                </div>
+        <section class="task-row">
+            <span class="task-num">6.</span>
+            <div class="showcase-box case-6">
+                <div class="item blue">About Us</div>
+                <div class="item blue">Our Services</div>
+                <div class="item orange grow-end">Get Started</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">7.</span>
-                <div class="case-info">
-                    <h2>Split Feature Card (Equal Height Cross-Axis Stretch)</h2>
-                    <code>align-items: stretch; (orange buy-panel stretches vertically to match long text)</code>
+        <section class="task-row">
+            <span class="task-num">7.</span>
+            <div class="showcase-box case-7">
+                <div class="item blue col-text">
+                    <span class="item-title">About Flexbox</span>
+                    <p>CSS Flexbox is a powerful layout system that helps arrange elements in rows or columns. It
+                        provides control over alignment, spacing, sizing, and responsiveness, making it easier to build
+                        modern web interfaces.</p>
                 </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="split-card-row">
-                    <div class="split-content-col">
-                        <span class="col-tag">Course Module</span>
-                        <h3>Full Stack Web Development Program</h3>
-                        <p>And this is a lot of content, okay? Okay? And this is a lot of content, okay? Okay? And this
-                            is a lot of content, okay? Okay? Learn modern HTML5 semantics, flexbox layouts, CSS grid,
-                            JavaScript DOM, responsive interfaces, and backend integration.</p>
-                    </div>
-                    <div class="split-action-col">
-                        <span class="action-title">Special Offer</span>
-                        <span class="price">$49</span>
-                        <button class="enroll-btn">Enroll Now</button>
-                    </div>
-                </div>
+                <div class="item orange col-side">Learn More</div>
             </div>
         </section>
 
-        <section class="exercise-card">
-            <div class="exercise-header">
-                <span class="case-number">8.</span>
-                <div class="case-info">
-                    <h2>Metadata Badges with Full-Width Alert Row</h2>
-                    <code>flex-wrap: wrap; Top badges sit on row 1; banner has flex-basis: 100%</code>
-                </div>
-            </div>
-            <div class="flex-preview-box">
-                <div class="wrapping-row">
-                    <span class="meta-tag blue-tag">&#128197; Batch 2026</span>
-                    <span class="meta-tag blue-tag">&#9201; 40 Hours Total</span>
-                    <div class="full-width-orange-alert">
-                        <span>&#9888; Important: Ensure all Flexbox exercises are submitted before the deadline!</span>
-                    </div>
-                </div>
+        <section class="task-row">
+            <span class="task-num">8.</span>
+            <div class="showcase-box case-8">
+                <div class="item blue top-item">Our Mission</div>
+                <div class="item blue top-item">Our Vision</div>
+                <div class="item orange bottom-row">Join Our Team</div>
             </div>
         </section>
-
     </main>
 
 </body>

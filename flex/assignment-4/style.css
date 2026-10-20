@@ -5,96 +5,45 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #111827;
-    padding: 2.5rem 1.5rem;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 24px 20px;
     line-height: 1.5;
 }
 
-.page-container {
-    max-width: 860px;
-    margin: 0 auto;
-}
-
-.title-section {
-    margin-bottom: 2rem;
-}
-
-.title-section h1 {
-    font-size: 1.85rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.25rem;
-}
-
-.title-section p {
-    font-size: 1rem;
-    color: #4b5563;
-}
-
-.demo-section {
-    margin-bottom: 2.5rem;
-}
-
-.screen-label {
-    font-size: 1.15rem;
-    font-weight: 600;
-    font-style: italic;
-    color: #64748b;
-    margin-bottom: 0.75rem;
-}
-
-.card-frame {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 4px;
-}
-
-.wide-card {
-    max-width: 100%;
-}
-
-.narrow-card {
-    max-width: 440px;
-}
-
-.flex-navbar {
+.navbar {
     background-color: #ff3c00;
-    padding: 12px 18px;
+    padding: 14px 20px;
     border-radius: 4px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 16px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 22px;
 }
 
 .brand-logo {
     color: #ffffff;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     text-decoration: none;
-    margin-right: 4px;
 }
 
 .nav-item {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
-    transition: opacity 0.2s;
 }
 
 .nav-item:hover {
-    opacity: 0.85;
+    text-decoration: underline;
 }
 
 .search-form {
@@ -105,12 +54,12 @@ body {
 .search-form input {
     background-color: #ffffff;
     border: none;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    color: #333333;
+    padding: 7px 12px;
+    font-size: 0.95rem;
+    color: #000000;
     outline: none;
     border-radius: 2px 0 0 2px;
-    width: 140px;
+    width: 160px;
 }
 
 .search-form button {
@@ -118,64 +67,50 @@ body {
     border: none;
     border-left: 1px solid #e5e7eb;
     color: #ff3c00;
-    font-weight: 600;
-    padding: 6px 12px;
-    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 7px 14px;
+    font-size: 0.95rem;
     cursor: pointer;
     border-radius: 0 2px 2px 0;
-    transition: background-color 0.2s;
 }
 
-.search-form button:hover {
-    background-color: #f3f4f6;
+.page-content {
+    max-width: 800px;
+    margin-top: 3rem;
 }
 
-.navbar-wide {
-    flex-direction: row;
-    justify-content: space-between;
+.page-content h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
 }
 
-.navbar-narrow {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-}
-
-.navbar-narrow .nav-links {
-    justify-content: flex-start;
-    gap: 14px;
-}
-
-.navbar-narrow .search-form {
-    width: 100%;
-}
-
-.navbar-narrow .search-form input {
-    flex: 1;
-    width: auto;
-}
-
-.live-navbar {
-    flex-wrap: wrap;
+.page-content p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
 }
 
 @media (max-width: 680px) {
-    .live-navbar {
+    body {
+        padding: 12px;
+    }
+
+    .navbar {
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
     }
 
-    .live-navbar .nav-links {
+    .nav-links {
         justify-content: flex-start;
-        gap: 14px;
+        gap: 16px;
     }
 
-    .live-navbar .search-form {
+    .search-form {
         width: 100%;
     }
 
-    .live-navbar .search-form input {
+    .search-form input {
         flex: 1;
         width: auto;
     }
