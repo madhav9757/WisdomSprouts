@@ -6,263 +6,9 @@
   <title>Instagram – Log in</title>
   <meta name="description" content="Instagram login page clone matching the official dark design." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #121212;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── Back link ── */
-    .back {
-      position: fixed;
-      top: 18px; left: 18px;
-      text-decoration: none;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.2s;
-      z-index: 20;
-    }
-    .back:hover { color: #fff; }
-
-    /* ── Main split layout ── */
-    .page {
-      flex: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 100vh;
-    }
-
-    /* ══════════════════════════
-       LEFT PANEL
-    ══════════════════════════ */
-    .left {
-      background: #000;
-      display: flex;
-      flex-direction: column;
-      padding: 32px 40px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Instagram icon top-left */
-    .ig-icon {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-      margin-bottom: 48px;
-    }
-
-    /* Big headline */
-    .headline {
-      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      max-width: 420px;
-      margin-bottom: 48px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .headline .highlight {
-      /* Pink/magenta gradient text matching Instagram brand */
-      background: linear-gradient(90deg, #e1306c, #c13584);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Photo collage */
-    .collage {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .collage img {
-      width: 100%;
-      max-width: 440px;
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.7));
-    }
-
-    /* ══════════════════════════
-       RIGHT PANEL
-    ══════════════════════════ */
-    .right {
-      background: #1a1a1a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 64px;
-    }
-
-    .login-box {
-      width: 100%;
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    /* "Log into Instagram" */
-    .login-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #f5f5f5;
-      margin-bottom: 24px;
-      letter-spacing: -0.01em;
-    }
-
-    /* Input fields */
-    .input-field {
-      width: 100%;
-      background: #2a2a2a;
-      border: 1px solid #3a3a3a;
-      border-radius: 8px;
-      padding: 14px 16px;
-      color: #f5f5f5;
-      font-family: inherit;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
-      margin-bottom: 10px;
-    }
-
-    .input-field::placeholder {
-      color: #7a7a7a;
-      font-size: 0.88rem;
-    }
-
-    .input-field:focus {
-      border-color: #555;
-    }
-
-    /* Log in button */
-    .btn-login {
-      width: 100%;
-      padding: 13px;
-      margin-top: 4px;
-      background: #0064d9;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 0.92rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      letter-spacing: 0.01em;
-    }
-    .btn-login:hover { background: #0057bf; }
-
-    /* Forgot password */
-    .forgot {
-      text-align: center;
-      margin-top: 18px;
-      margin-bottom: 18px;
-    }
-    .forgot a {
-      color: #f5f5f5;
-      font-size: 0.88rem;
-      font-weight: 500;
-      text-decoration: none;
-    }
-    .forgot a:hover { text-decoration: underline; }
-
-    /* Divider */
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .divider::before, .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #3a3a3a;
-    }
-    .divider span {
-      color: #7a7a7a;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
-
-    /* Log in with Facebook */
-    .btn-facebook {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: #2a2a2a;
-      border: 1px solid #3a3a3a;
-      border-radius: 8px;
-      padding: 12px;
-      color: #4a90d9;
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-bottom: 18px;
-    }
-    .btn-facebook:hover { background: #333; }
-
-    /* Create new account */
-    .btn-create {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      border: 1.5px solid #4a90d9;
-      border-radius: 8px;
-      background: transparent;
-      color: #4a90d9;
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-decoration: none;
-      margin-bottom: 28px;
-    }
-    .btn-create:hover { background: rgba(74,144,217,0.08); }
-
-    /* Meta logo */
-    .meta-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      color: #7a7a7a;
-      font-size: 0.82rem;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .page { grid-template-columns: 1fr; }
-      .left { display: none; }
-      .right { padding: 48px 24px; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/form-2.css" />
 </head>
 <body>
 
@@ -273,40 +19,26 @@
     <!-- ════ LEFT PANEL ════ -->
     <section class="left">
 
-      <!-- Instagram icon (SVG gradient) -->
-      <svg class="ig-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="ig1" cx="30%" cy="107%" r="100%">
-            <stop offset="0%" stop-color="#ffd600"/>
-            <stop offset="50%" stop-color="#ff7a00"/>
-            <stop offset="100%" stop-color="#ff0069"/>
-          </radialGradient>
-          <radialGradient id="ig2" cx="10%" cy="10%" r="90%">
-            <stop offset="0%" stop-color="#a033ff"/>
-            <stop offset="100%" stop-color="#ff0069" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="48" height="48" rx="12" fill="url(#ig1)"/>
-        <rect width="48" height="48" rx="12" fill="url(#ig2)"/>
-        <rect x="11" y="11" width="26" height="26" rx="7" stroke="#fff" stroke-width="3" fill="none"/>
-        <circle cx="24" cy="24" r="7" stroke="#fff" stroke-width="3" fill="none"/>
-        <circle cx="35" cy="13" r="2.5" fill="#fff"/>
-      </svg>
+      <!-- Top-left Instagram icon -->
+      <div class="ig-logo-wrap">
+        <i data-visualcompletion="css-img" aria-label="Instagram" class="x15mokao x1ga7v0g x16uus16 xbiv7yw" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/yO/r/Ny6hrBVLYjl.webp&quot;); background-position: 0px 0px; background-size: auto; width: 96px; height: 96px; background-repeat: no-repeat; display: inline-block;"></i>
+      </div>
 
-      <!-- Headline -->
-      <h1 class="headline">
-        See everyday moments from<br>
-        your <span class="highlight">close friends.</span>
-      </h1>
+      <!-- Main center content -->
+      <div class="left-content">
+        <!-- Headline -->
+        <h1 class="headline">
+          See everyday moments from<br />
+          your <span class="highlight">close friends.</span>
+        </h1>
 
-      <!-- Photo collage -->
-      <div class="collage">
-        <img
-          src="assests/instagram/image.png"
-          alt="Friends sharing moments on Instagram"
-          width="440"
-          height="440"
-        />
+        <!-- Photo collage -->
+        <div class="collage">
+          <img
+            src="assests/instagram/image.png"
+            alt="Instagram Moments"
+          />
+        </div>
       </div>
 
     </section>
@@ -318,24 +50,28 @@
         <h2 class="login-title">Log into Instagram</h2>
 
         <form id="ig-login-form" novalidate>
-          <input
-            type="text"
-            id="ig-user"
-            name="username"
-            class="input-field"
-            placeholder="Mobile number, username or email"
-            autocomplete="username"
-            required
-          />
-          <input
-            type="password"
-            id="ig-pass"
-            name="password"
-            class="input-field"
-            placeholder="Password"
-            autocomplete="current-password"
-            required
-          />
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="ig-user"
+              name="username"
+              class="input-field"
+              placeholder="Mobile number, username or email"
+              autocomplete="username"
+              required
+            />
+          </div>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="ig-pass"
+              name="password"
+              class="input-field"
+              placeholder="Password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
           <button type="submit" class="btn-login" id="ig-login-btn">Log in</button>
         </form>
 
@@ -343,29 +79,25 @@
           <a href="#" id="ig-forgot">Forgot password?</a>
         </div>
 
-        <div class="divider"><span>OR</span></div>
-
         <!-- Log in with Facebook -->
         <button type="button" class="btn-facebook" id="ig-fb-btn">
-          <!-- Facebook icon -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#4a90d9">
-            <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="fb-icon" aria-hidden="true">
+            <circle cx="12" cy="12" r="12" fill="#0064E0"/>
+            <path d="M15.5 12h-2.5v8h-3v-8h-2v-2.7h2V7.4c0-2.2 1.3-3.4 3.3-3.4 1 0 1.8.1 2.1.1v2.4h-1.4c-1.1 0-1.5.5-1.5 1.4v1.4h2.8l-.4 2.7z" fill="#FFFFFF"/>
           </svg>
-          Log in with Facebook
+          <span>Log in with Facebook</span>
         </button>
 
         <!-- Create new account -->
         <a href="#" class="btn-create" id="ig-create-btn">Create new account</a>
 
         <!-- Meta logo -->
-        <div class="meta-logo">
-          <!-- Meta ∞ wordmark -->
-          <svg width="54" height="18" viewBox="0 0 54 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Infinity / Meta symbol -->
-            <path d="M7 9C7 6.8 8.3 5.5 9.8 5.5c1.3 0 2.1.8 3.2 2.8C14.1 6.3 15.2 5.5 16.5 5.5c1.5 0 2.8 1.3 2.8 3.5 0 2.1-1.3 3.5-2.8 3.5-1.3 0-2.4-.8-3.5-2.8C11.9 11.7 11 12.5 9.8 12.5 8.3 12.5 7 11.2 7 9z" fill="#7a7a7a"/>
-            <path d="M13 9c1.2 2 2.1 3.5 3.5 3.5 1.1 0 2-1 2-3.5s-.9-3.5-2-3.5C15.1 5.5 14.2 7 13 9z" fill="#7a7a7a" opacity="0.7"/>
-            <!-- Meta text -->
-            <text x="22" y="13" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="600" fill="#7a7a7a" letter-spacing="0.5">Meta</text>
+        <div class="meta-logo" aria-label="Meta">
+          <svg width="60" height="13" viewBox="0 0 948 191" fill="#737373" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Meta">
+            <path fill="currentColor" d="m31.06,125.96c0,10.98 2.41,19.41 5.56,24.51 4.13,6.68 10.29,9.51 16.57,9.51 8.1,0 15.51-2.01 29.79-21.76 11.44-15.83 24.92-38.05 33.99-51.98l15.36-23.6c10.67-16.39 23.02-34.61 37.18-46.96 11.56-10.08 24.03-15.68 36.58-15.68 21.07,0 41.14,12.21 56.5,35.11 16.81,25.08 24.97,56.67 24.97,89.27 0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75l0-31.02c17.63,0 22.03-16.2 22.03-34.74 0-26.42-6.16-55.74-19.73-76.69-9.63-14.86-22.11-23.94-35.84-23.94-14.85,0-26.8,11.2-40.23,31.17-7.14,10.61-14.47,23.54-22.7,38.13l-9.06,16.05c-18.2,32.27-22.81,39.62-31.91,51.75-15.95,21.24-29.57,29.29-47.5,29.29-21.27,0-34.72-9.21-43.05-23.09-6.8-11.31-10.14-26.15-10.14-43.06z"/>
+            <path fill="currentColor" d="m24.49,37.3c14.24-21.95 34.79-37.3 58.36-37.3 13.65,0 27.22,4.04 41.39,15.61 15.5,12.65 32.02,33.48 52.63,67.81l7.39,12.32c17.84,29.72 27.99,45.01 33.93,52.22 7.64,9.26 12.99,12.02 19.94,12.02 17.63,0 22.03-16.2 22.03-34.74l27.4-.86c0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75-12.8,0-24.14-2.78-36.68-14.61-9.64-9.08-20.91-25.21-29.58-39.71l-25.79-43.08c-12.94-21.62-24.81-37.74-31.68-45.04-7.39-7.85-16.89-17.33-32.05-17.33-12.27,0-22.69,8.61-31.41,21.78z"/>
+            <path fill="currentColor" d="m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72.95 0,10.98 2.41,19.41 5.56,24.51l-26.48,17.44c-6.8-11.31-10.14-26.15-10.14-43.06 0-30.75 8.44-62.8 24.49-87.55 14.24-21.95 34.79-37.3 58.36-37.3z"/>
+            <path fill="currentColor" d="m347.94,6.04h35.93l61.09,110.52 61.1-110.52h35.15v181.6h-29.31v-139.18l-53.58,96.38h-27.5l-53.57-96.38v139.18h-29.31z m285.11,67.71c-21.02,0-33.68,15.82-36.71,35.41h71.34c-1.47-20.18-13.11-35.41-34.63-35.41z m-65.77,46.57c0-41.22 26.64-71.22 66.28-71.22 38.99,0 62.27,29.62 62.27,73.42v8.05h-99.49c3.53,21.31 17.67,35.67 40.47,35.67 18.19,0 29.56-5.55 40.34-15.7l15.57,19.07c-14.67,13.49-33.33,21.27-56.95,21.27-42.91,0-68.49-31.29-68.49-70.56z m164.09-43.97h-26.98v-24h26.98v-39.69h28.28v39.69h40.99v24h-40.99v60.83c0,20.77 6.64,28.15 22.96,28.15 7.45,0 11.72-.64 18.03-1.69v23.74c-7.86,2.22-15.36,3.24-23.48,3.24-30.53,0-45.79-16.68-45.79-50.07z m188.35,23.34c-5.68-14.34-18.35-24.9-36.97-24.9-24.2,0-39.69,17.17-39.69,45.14 0,27.27 14.26,45.27 38.53,45.27 19.08,0 32.7-11.1 38.13-24.91z m28.28,87.95h-27.76v-18.94c-7.76,11.15-21.88,22.18-44.75,22.18-36.78,0-61.36-30.79-61.36-70.95 0-40.54 25.17-70.83 62.92-70.83 18.66,0 33.3,7.46 43.19,20.63v-17.38h27.76z"/>
           </svg>
         </div>
 
@@ -375,9 +107,28 @@
   </div>
 
   <script>
-    document.getElementById('ig-login-form').addEventListener('submit', (e) => {
+    const form = document.getElementById('ig-login-form');
+    const userInput = document.getElementById('ig-user');
+    const passInput = document.getElementById('ig-pass');
+    const loginBtn = document.getElementById('ig-login-btn');
+
+    function checkInputs() {
+      if (userInput.value.trim().length > 0 && passInput.value.length >= 6) {
+        loginBtn.classList.add('active');
+      } else {
+        loginBtn.classList.remove('active');
+      }
+    }
+
+    userInput.addEventListener('input', checkInputs);
+    passInput.addEventListener('input', checkInputs);
+
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       alert('Logged in successfully!');
     });
 

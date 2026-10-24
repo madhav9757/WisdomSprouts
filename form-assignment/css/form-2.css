@@ -1,0 +1,337 @@
+/* ==========================================================================
+   Instagram Login Page - Form 2 Stylesheet
+   Matches official Instagram web dark layout
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-left: #000000;
+  --bg-right: #121212;
+  --border-panel: #262626;
+  --border-input: #363636;
+  --border-input-focus: #737373;
+  --text-primary: #f5f5f5;
+  --text-secondary: #737373;
+  --blue-primary: #0064e0;
+  --blue-disabled: #00376b;
+  --blue-text-disabled: rgba(255, 255, 255, 0.6);
+  --btn-fb-bg: #1e242d;
+  --btn-fb-border: #2f3743;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-right);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Back to all forms navigation link ── */
+.back {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  z-index: 50;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.back:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Main Split Page Layout ── */
+.page {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ══════════════════════════════════════════
+   LEFT PANEL (Brand showcase & moments collage)
+══════════════════════════════════════════ */
+.left {
+  background: var(--bg-left);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 40px 48px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+/* Top-left Instagram icon */
+.ig-logo-wrap {
+  display: flex;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.ig-logo-wrap i {
+  flex-shrink: 0;
+  /* Visual icon dimensions */
+  width: 96px;
+  height: 96px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Centered content block */
+.left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -30px; /* balances visual center against top icon */
+  padding: 0 20px;
+  z-index: 2;
+}
+
+/* Big Headline */
+.headline {
+  font-size: clamp(2rem, 2.75vw, 2.65rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* "close friends." Instagram gradient text */
+.headline .highlight {
+  background: linear-gradient(90deg, #ff5432 0%, #f7365d 30%, #df287d 65%, #9d2ad5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Photo collage container */
+.collage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.collage img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ══════════════════════════════════════════
+   RIGHT PANEL (Login form container)
+══════════════════════════════════════════ */
+.right {
+  background: var(--bg-right);
+  border-left: 1px solid var(--border-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  min-height: 100vh;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* "Log into Instagram" */
+.login-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+/* Input elements */
+.input-wrap {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  width: 100%;
+  background: var(--bg-right);
+  border: 1px solid var(--border-input);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.input-field:focus {
+  border-color: var(--border-input-focus);
+}
+
+/* "Log in" button */
+.btn-login {
+  width: 100%;
+  padding: 13px 16px;
+  margin-top: 8px;
+  background: var(--blue-disabled);
+  border: none;
+  border-radius: 12px;
+  color: var(--blue-text-disabled);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.btn-login.active,
+.btn-login:not(:disabled):hover {
+  background: var(--blue-primary);
+  color: #ffffff;
+}
+
+/* "Forgot password?" */
+.forgot {
+  text-align: center;
+  margin-top: 22px;
+  margin-bottom: 38px;
+}
+
+.forgot a {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* "Log in with Facebook" button */
+.btn-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--btn-fb-bg);
+  border: 1px solid var(--btn-fb-border);
+  border-radius: 9999px;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 16px;
+}
+
+.btn-facebook:hover {
+  background: #252d38;
+}
+
+.fb-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* "Create new account" button */
+.btn-create {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid var(--blue-primary);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--blue-primary);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  margin-bottom: 48px;
+}
+
+.btn-create:hover {
+  background: rgba(0, 100, 224, 0.08);
+}
+
+/* Meta logo */
+.meta-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.meta-logo svg {
+  display: block;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════════════ */
+@media (max-width: 960px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    border-left: none;
+    padding: 48px 24px;
+  }
+}
