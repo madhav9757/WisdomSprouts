@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – Form 1</title>
+</head>
+<body>
+
+  <br>
+
+  <table border="1" cellpadding="20" cellspacing="0" align="center" width="500" style="border-color: #c0c0c0;">
+    <tr>
+      <td>
+
+        <h1>Register</h1>
+
+        <br>
+
+        <p>Kindly fill in this form to register.</p>
+
+        <br>
+
+        <form id="register-form">
+
+          <b>Username</b><br>
+          <input type="text" id="username" name="username" placeholder="Enter username" size="60"><br>
+
+          <b>Email</b><br>
+          <input type="email" id="email" name="email" placeholder="Enter Email" size="60"><br>
+
+          <b>Password</b><br>
+          <input type="password" id="password" name="password" placeholder="Enter Password" size="60"><br>
+
+          <b>Repeat Password</b><br>
+          <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat Password" size="60"><br>
+
+          <input type="submit" id="register-btn" value="Register" size="63" style="width: 100%">
+
+        </form>
+
+        <br>
+
+        <p align="center">Already have an account? <a href="#">Log in</a>.</p>
+
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var pass = document.getElementById('password').value;
+      var repeat = document.getElementById('repeat-password').value;
+      if (pass !== repeat) {
+        alert('Passwords do not match!');
+        return;
+      }
+      alert('Registered successfully!');
+    });
+  </script>
+
+</body>
+</html>

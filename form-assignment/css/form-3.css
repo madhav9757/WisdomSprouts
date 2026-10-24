@@ -1,0 +1,141 @@
+/* ── form-3.css ── */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #3d6ef5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ── Back link ── */
+.back {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+  z-index: 20;
+}
+
+.back:hover {
+  color: #fff;
+}
+
+/* ── White card ── */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 36px 40px 40px;
+  width: 100%;
+  max-width: 740px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Title ── */
+.card h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 22px;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 14px;
+  margin-top: 4px;
+}
+
+/* ── 3-column grid ── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px 20px;
+  margin-bottom: 22px;
+}
+
+/* ── Each field group ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.01em;
+}
+
+.form-group input {
+  border: 1.5px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.form-group input:focus {
+  border-color: #3d6ef5;
+}
+
+/* ── Next button ── */
+.btn-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 32px;
+  background: #3d6ef5;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.btn-next:hover {
+  background: #2d5ce0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+}

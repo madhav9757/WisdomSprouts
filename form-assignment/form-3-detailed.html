@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration – Form 3</title>
+  <meta name="description" content="Detailed registration form with personal and identity details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/form-3.css" />
+</head>
+<body>
+
+  <a href="index.html" class="back">← Back to all forms</a>
+
+  <div class="card">
+
+    <h1>Registration</h1>
+
+    <form id="registration-form" novalidate>
+
+      <!-- ── Personal Details ── -->
+      <p class="section-label">Personal Details</p>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="fullName" placeholder="Enter your name" autocomplete="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" id="dob" name="dob" placeholder="Enter birth date" autocomplete="bday" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" autocomplete="tel" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text" id="gender" name="gender" placeholder="Enter your gender" required />
+        </div>
+
+        <div class="form-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" name="occupation" placeholder="Enter occupation" autocomplete="organization-title" required />
+        </div>
+
+      </div>
+
+      <!-- ── Identity Details ── -->
+      <p class="section-label">Identity Details</p>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="id-type">ID Type</label>
+          <input type="text" id="id-type" name="idType" placeholder="Enter ID Type" required />
+        </div>
+
+        <div class="form-group">
+          <label for="id-number">ID Number</label>
+          <input type="text" id="id-number" name="idNumber" placeholder="Enter ID number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="issue-authority">Issue Authority</label>
+          <input type="text" id="issue-authority" name="issueAuthority" placeholder="Enter issue department" required />
+        </div>
+
+        <div class="form-group">
+          <label for="issue-date">Issue Date</label>
+          <input type="text" id="issue-date" name="issueDate" placeholder="Enter ID issue date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="issue-state">Issue State</label>
+          <input type="text" id="issue-state" name="issueState" placeholder="Enter ID issue state" required />
+        </div>
+
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" name="expiryDate" placeholder="Enter ID expiry date" required />
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn-next" id="next-btn">
+        Next &nbsp;→
+      </button>
+
+    </form>
+
+  </div>
+
+  <script>
+    document.getElementById('registration-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!e.target.checkValidity()) {
+        e.target.reportValidity();
+        return;
+      }
+      alert('Details submitted! Proceeding to next step.');
+    });
+  </script>
+
+</body>
+</html>
