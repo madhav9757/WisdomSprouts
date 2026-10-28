@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment I</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-brand">&larr; Back to Grid Overview</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Assignment I</a>
+      <a href="../assignment-2/index.html" class="nav-link">Assignment II</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="header-inner">
+      <h1 class="main-title">&#128221; Assignment I</h1>
+      <p class="subtitle">Complete CSS Grid implementation demonstrating 5 layout challenges.</p>
+      <div class="quick-nav">
+        <a href="#task-1" class="quick-link">1. Basic Grid</a>
+        <a href="#task-2" class="quick-link">2. Blog Page</a>
+        <a href="#task-3" class="quick-link">3. Responsive Gallery</a>
+        <a href="#task-4" class="quick-link">4. Dashboard Layout</a>
+        <a href="#task-5" class="quick-link">5. Implicit Grid Cards</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-container">
+    <section id="task-1" class="task-section">
+      <div class="task-header">
+        <h2 class="task-title">Assignment 1: Basic Grid Layout</h2>
+        <p class="task-desc">Create a 3x3 grid layout where each cell is 100px by 100px with a 10px gap. Fill it with 9 colored boxes.</p>
+      </div>
+      <div class="task-canvas task-canvas-center">
+        <div class="basic-grid">
+          <div class="box box-1">Box 1</div>
+          <div class="box box-2">Box 2</div>
+          <div class="box box-3">Box 3</div>
+          <div class="box box-4">Box 4</div>
+          <div class="box box-5">Box 5</div>
+          <div class="box box-6">Box 6</div>
+          <div class="box box-7">Box 7</div>
+          <div class="box box-8">Box 8</div>
+          <div class="box box-9">Box 9</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="task-2" class="task-section">
+      <div class="task-header">
+        <h2 class="task-title">Assignment 2: Blog Page Layout</h2>
+        <p class="task-desc">Use named grid areas to create a layout with a header, sidebar, main content, and footer. Use fr units.</p>
+      </div>
+      <div class="task-canvas">
+        <div class="blog-grid">
+          <header class="blog-header">
+            <h3>Blog Header</h3>
+            <span class="tag">Header Area</span>
+          </header>
+          <aside class="blog-sidebar">
+            <h4>Sidebar</h4>
+            <span class="tag">Sidebar Area (1fr)</span>
+            <ul class="sidebar-list">
+              <li>Web Technologies</li>
+              <li>CSS Grid Guides</li>
+              <li>Responsive Design</li>
+              <li>Modern Frontend</li>
+            </ul>
+          </aside>
+          <article class="blog-main">
+            <h3>Main Content</h3>
+            <span class="tag">Main Content Area (3fr)</span>
+            <p>CSS Grid brings two-dimensional layout controls to web design. Named grid areas simplify responsive layout management by declaring spatial zones directly in CSS with readable area identifiers.</p>
+            <p>Fractional units (fr) distribute available space proportionately, ensuring fluid resizing across different display widths.</p>
+          </article>
+          <footer class="blog-footer">
+            <p>Blog Footer &copy; 2026. All rights reserved.</p>
+            <span class="tag">Footer Area</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="task-3" class="task-section">
+      <div class="task-header">
+        <h2 class="task-title">Assignment 3: Responsive Gallery</h2>
+        <p class="task-desc">Make a responsive image gallery using <code>auto-fit</code> and <code>minmax(150px, 1fr)</code>. Images should resize based on screen size.</p>
+      </div>
+      <div class="task-canvas">
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-1.jpg" alt="Mountain Vista">
+            <div class="gallery-label">Mountain Vista</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-2.jpg" alt="Sunset Dunes">
+            <div class="gallery-label">Sunset Dunes</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-3.jpg" alt="Emerald Forest">
+            <div class="gallery-label">Emerald Forest</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-4.jpg" alt="Northern Lights">
+            <div class="gallery-label">Northern Lights</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-5.jpg" alt="Ocean Breeze">
+            <div class="gallery-label">Ocean Breeze</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-6.jpg" alt="Purple Haze">
+            <div class="gallery-label">Purple Haze</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-7.jpg" alt="Golden Sunset">
+            <div class="gallery-label">Golden Sunset</div>
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/gallery/img-8.jpg" alt="Midnight Sky">
+            <div class="gallery-label">Midnight Sky</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="task-4" class="task-section">
+      <div class="task-header">
+        <h2 class="task-title">Assignment 4: Dashboard Layout</h2>
+        <p class="task-desc">Create a dashboard using <code>grid-template-areas</code> with the following sections: header, navigation, main, aside, and footer.</p>
+      </div>
+      <div class="task-canvas">
+        <div class="dashboard-grid">
+          <header class="dash-section dash-header">
+            <div class="dash-brand">Analytics Dashboard</div>
+            <div class="dash-user-badge">Admin User</div>
+          </header>
+          <nav class="dash-section dash-nav">
+            <div class="dash-nav-title">Navigation</div>
+            <ul class="dash-nav-menu">
+              <li class="active-item">Dashboard</li>
+              <li>Analytics</li>
+              <li>Projects</li>
+              <li>Reports</li>
+              <li>Settings</li>
+            </ul>
+          </nav>
+          <main class="dash-section dash-main">
+            <h3>Main Workspace</h3>
+            <div class="kpi-cards">
+              <div class="kpi-card">
+                <span class="kpi-title">Total Users</span>
+                <span class="kpi-value">24,520</span>
+              </div>
+              <div class="kpi-card">
+                <span class="kpi-title">Active Sessions</span>
+                <span class="kpi-value">1,480</span>
+              </div>
+              <div class="kpi-card">
+                <span class="kpi-title">Monthly Growth</span>
+                <span class="kpi-value">+18.4%</span>
+              </div>
+            </div>
+            <div class="dash-feed">
+              <h4>Recent Platform Events</h4>
+              <p>System backup completed with 100% data integrity.</p>
+              <p>API endpoint latency reduced to under 45ms.</p>
+            </div>
+          </main>
+          <aside class="dash-section dash-aside">
+            <h4>Aside Panel</h4>
+            <div class="aside-box">
+              <strong>Server Status</strong>
+              <p>Operational</p>
+            </div>
+            <div class="aside-box">
+              <strong>Pending Tasks</strong>
+              <p>4 tasks remaining</p>
+            </div>
+          </aside>
+          <footer class="dash-section dash-footer">
+            <p>Dashboard System Footer &bull; Operational Status: Normal</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="task-5" class="task-section">
+      <div class="task-header">
+        <h2 class="task-title">Assignment 5: Card Layout with Implicit Grid</h2>
+        <p class="task-desc">Create a grid of cards. Each card contains an image, title, and description. Use <code>auto-fill</code> and <code>minmax</code> to make it responsive.</p>
+      </div>
+      <div class="task-canvas">
+        <div class="implicit-card-grid">
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-1.jpg" alt="Web Development">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Web Development</h3>
+              <p class="card-text">Building modern responsive interfaces using contemporary standards, CSS Grid, and accessible semantic structures.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-2.jpg" alt="Cloud Computing">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Cloud Computing</h3>
+              <p class="card-text">Scalable architecture deployments, containerized microservices, and high-availability server clusters.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-3.jpg" alt="Artificial Intelligence">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Artificial Intelligence</h3>
+              <p class="card-text">Next-generation language models, pattern recognition neural networks, and automated reasoning engines.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-4.jpg" alt="Mobile Applications">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Mobile Applications</h3>
+              <p class="card-text">High-performance cross-platform applications delivering seamless native mobile user experiences.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-5.jpg" alt="Cybersecurity">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Cybersecurity</h3>
+              <p class="card-text">Defensive security protocols, end-to-end cryptographic infrastructure, and continuous vulnerability monitoring.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image-box">
+              <img src="../assets/cards/card-6.jpg" alt="Data Analytics">
+            </div>
+            <div class="card-content">
+              <h3 class="card-heading">Data Analytics</h3>
+              <p class="card-text">Actionable data visualizations, predictive statistical modeling, and real-time business intelligence dashboards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
