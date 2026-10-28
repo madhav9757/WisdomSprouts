@@ -20,7 +20,6 @@
   src: url('https://fonts.airindia.com/fonts/AirIndiaWebFont/airindia-regular-webfont.woff2') format('woff2');
 }
 
-/* --- CSS Variables & Theme Tokens --- */
 :root {
   --ai-red: #DA0E29;
   --ai-red-hover: #B8001F;
@@ -58,7 +57,6 @@
   --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* --- Base Reset & Typography --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -184,9 +182,6 @@ ul {
   display: block;
 }
 
-/* ==========================================================================
-   1. TOP ANNOUNCEMENT BAR
-   ========================================================================== */
 .top-announcement-bar {
   background-color: #FFFFFF;
   border-bottom: 1px solid #ebebeb;
@@ -277,9 +272,6 @@ ul {
   display: block;
 }
 
-/* ==========================================================================
-   2. MAIN HEADER & NAVIGATION
-   ========================================================================== */
 .main-header {
   background-color: #FFFFFF;
   border-bottom: 1px solid #ebebeb;
@@ -436,7 +428,6 @@ ul {
   opacity: 0.92;
 }
 
-/* Nav Menu Row */
 .header-nav-row {
   display: flex;
   justify-content: flex-end;
@@ -469,9 +460,6 @@ ul {
   color: var(--ai-red);
 }
 
-/* ==========================================================================
-   3. HERO & BOOKING WIDGET SECTION
-   ========================================================================== */
 .hero-booking-section {
   padding: 32px 0 24px 0;
   background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-page) 100%);
@@ -536,7 +524,6 @@ ul {
   font-weight: 700;
 }
 
-/* Trip Options Row */
 .trip-options-row {
   display: flex;
   align-items: center;
@@ -607,7 +594,6 @@ ul {
   font-weight: 700;
 }
 
-/* Flight Inputs Segmented Grid */
 .flight-inputs-grid {
   display: flex;
   align-items: center;
@@ -726,7 +712,6 @@ ul {
   box-shadow: 0 6px 18px rgba(218, 14, 41, 0.45);
 }
 
-/* Bottom Notice */
 .booking-card-footer {
   display: flex;
   justify-content: flex-end;
@@ -752,9 +737,6 @@ ul {
   height: 14px;
 }
 
-/* ==========================================================================
-   COMMON SECTION STYLING
-   ========================================================================== */
 .section-header-row {
   display: flex;
   align-items: flex-start;
@@ -817,9 +799,6 @@ ul {
   color: var(--ai-red);
 }
 
-/* ==========================================================================
-   4. EXCLUSIVE DEALS SECTION
-   ========================================================================== */
 .exclusive-deals-section {
   padding: 32px 0 24px 0;
 }
@@ -873,9 +852,6 @@ ul {
   height: 10px;
 }
 
-/* ==========================================================================
-   5. QUICK ANCILLARY LINKS BAR
-   ========================================================================== */
 .ancillary-bar-section {
   padding: 20px 0 28px 0;
 }
@@ -932,9 +908,6 @@ ul {
   transform: translateX(4px);
 }
 
-/* ==========================================================================
-   6. HERO PROMOTIONAL BANNER CAROUSEL
-   ========================================================================== */
 .hero-promo-banner-section {
   padding: 16px 0 32px 0;
 }
@@ -1008,9 +981,6 @@ ul {
   transform: scale(1.1);
 }
 
-/* ==========================================================================
-   7. BOOK NONSTOP DIRECT FLIGHTS (DESTINATIONS)
-   ========================================================================== */
 .destinations-section {
   padding: 32px 0 40px 0;
 }
@@ -1047,9 +1017,6 @@ ul {
   transform: scale(1.03);
 }
 
-/* ==========================================================================
-   8. PLAN YOUR TRIP SECTION
-   ========================================================================== */
 .plan-trip-section {
   padding: 24px 0 48px 0;
 }
@@ -1086,9 +1053,6 @@ ul {
   transform: scale(1.02);
 }
 
-/* ==========================================================================
-   9. MAHARAJA CLUB BENEFITS SECTION
-   ========================================================================== */
 .maharaja-benefits-section {
   background-color: var(--bg-warm);
   padding: 48px 0 56px 0;
@@ -1252,9 +1216,6 @@ ul {
   display: block;
 }
 
-/* ==========================================================================
-   10. AIR INDIA EXPERIENCE SECTION
-   ========================================================================== */
 .experience-section {
   padding: 48px 0;
 }
@@ -1311,9 +1272,6 @@ ul {
   transform: scale(1.02);
 }
 
-/* ==========================================================================
-   11. MOBILE APP SECTION
-   ========================================================================== */
 .mobile-app-section {
   padding: 32px 0 48px 0;
 }
@@ -1370,7 +1328,6 @@ ul {
   line-height: 1.5;
 }
 
-/* Ratings card */
 .ratings-card {
   text-align: center;
   align-items: center;
@@ -1412,7 +1369,6 @@ ul {
   color: var(--text-muted);
 }
 
-/* Center Phone banner */
 .app-center-col {
   display: flex;
 }
@@ -1432,7 +1388,6 @@ ul {
   display: block;
 }
 
-/* Right App cards */
 .aeye-brand-badge {
   display: flex;
   flex-direction: column;
@@ -1470,7 +1425,6 @@ ul {
   display: inline-block;
 }
 
-/* Download card */
 .download-tiny-title {
   font-size: 10px;
   font-weight: 800;
@@ -1510,9 +1464,6 @@ ul {
   background: #FFFFFF;
 }
 
-/* ==========================================================================
-   12. AWARDS SECTION
-   ========================================================================== */
 .awards-section {
   padding: 48px 0 56px 0;
   text-align: center;
@@ -1547,9 +1498,6 @@ ul {
   height: auto;
 }
 
-/* ==========================================================================
-   13. COMPREHENSIVE FOOTER
-   ========================================================================== */
 .main-footer {
   background-color: var(--bg-footer);
   border-top: 1px solid #EFE8DE;
@@ -1563,7 +1511,6 @@ ul {
   padding: 0 24px;
 }
 
-/* Links Rows */
 .footer-links-grid-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1637,7 +1584,6 @@ ul {
   margin: 20px 0;
 }
 
-/* Legal Links & Social */
 .footer-legal-social-row {
   display: flex;
   justify-content: space-between;
@@ -1702,7 +1648,6 @@ ul {
   height: 18px;
 }
 
-/* Disclaimer text */
 .footer-disclaimer {
   font-size: 11px;
   color: #777777;
@@ -1713,7 +1658,6 @@ ul {
   gap: 10px;
 }
 
-/* Brands bottom bar */
 .footer-brand-bottom-bar {
   display: flex;
   align-items: center;
@@ -1731,7 +1675,6 @@ ul {
   width: auto;
 }
 
-/* Copyright Row */
 .copyright-row {
   text-align: center;
   font-size: 12px;
@@ -1749,9 +1692,6 @@ ul {
   color: #777777;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (TABLET & MOBILE)
-   ========================================================================== */
 @media (max-width: 1200px) {
   .flight-inputs-grid {
     flex-wrap: wrap;
