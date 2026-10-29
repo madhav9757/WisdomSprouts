@@ -1,44 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment II</title>
+  <title>Assignment II - WisdomSprouts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <nav class="top-nav">
-    <a href="../index.html" class="nav-link">&larr; Back to Grid Overview</a>
-    <div class="nav-group">
-      <a href="../assignment-1/index.html" class="nav-link">Assignment I</a>
-      <a href="index.html" class="nav-link active">Assignment II</a>
+    <a href="../index.html" class="nav-brand">Back to Overview</a>
+    <div class="nav-links">
+      <a href="../assignment-1/index.html" class="nav-link">Assignment 01</a>
+      <a href="index.html" class="nav-link active">Assignment 02</a>
     </div>
   </nav>
 
+  <header class="hero">
+    <div class="badge">Assignment II</div>
+    <h1>Advanced Grid Layouts</h1>
+    <p>Complex multi-track CSS Grid implementations featuring asymmetrical spans and angled polygon layouts.</p>
+  </header>
+
   <main class="page-wrapper">
-    <h1 class="assignment-title">&#128221; Assignment II</h1>
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-badge">Layout 01</div>
+        <h2 class="section-title">Fruit Collage Grid</h2>
+        <p class="section-desc">Four-column asymmetrical grid with coordinated row spanning and proportional cell
+          alignment.</p>
+      </div>
+      <div class="section-body">
+        <div class="gallery-wrapper">
+          <div class="gallery-grid">
+            <div class="grid-cell cell-grapes">
+              <img src="../assets/fruits/grapes.png" alt="Grapes">
+            </div>
+            <div class="grid-cell cell-strawberries">
+              <img src="../assets/fruits/strawberries.png" alt="Strawberries">
+            </div>
+            <div class="grid-cell cell-grapefruit">
+              <img src="../assets/fruits/grapefruit.png" alt="Grapefruit">
+            </div>
+            <div class="grid-cell cell-watermelon">
+              <img src="../assets/fruits/watermelon.png" alt="Watermelon">
+            </div>
+            <div class="grid-cell cell-papaya">
+              <img src="../assets/fruits/papaya.png" alt="Papaya">
+            </div>
+            <div class="grid-cell cell-pineapples">
+              <img src="../assets/fruits/pineapples.png" alt="Pineapples">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="gallery-grid">
-      <div class="grid-cell cell-grapes">
-        <img src="../assets/fruits/grapes.png" alt="Grapes">
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-badge">Layout 02</div>
+        <h2 class="section-title">Diagonal Grid Banner</h2>
+        <p class="section-desc">Replication of the angled banner grid using anime photography assets with coordinated
+          diagonal clipping.</p>
       </div>
-      <div class="grid-cell cell-strawberries">
-        <img src="../assets/fruits/strawberries.png" alt="Strawberries">
+      <div class="section-body">
+        <div class="diagonal-banner">
+          <div class="banner-item item-top-left">
+            <img src="../assets/anime/image.png" alt="Anime Scene 1">
+          </div>
+          <div class="banner-item item-bottom-left">
+            <img src="../assets/anime/image copy.png" alt="Anime Scene 2">
+          </div>
+          <div class="banner-item item-center-text">
+            <div class="text-wedge">
+              <h3 class="banner-heading">THIS GRID WORKS<br>IN INTERNET EXPLORER</h3>
+              <p class="banner-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+              </p>
+            </div>
+          </div>
+          <div class="banner-item item-bottom-right">
+            <img src="../assets/anime/image copy 2.png" alt="Anime Scene 3">
+          </div>
+          <div class="banner-item item-top-right">
+            <img src="../assets/anime/image copy 3.png" alt="Anime Scene 4">
+          </div>
+        </div>
       </div>
-      <div class="grid-cell cell-grapefruit">
-        <img src="../assets/fruits/grapefruit.png" alt="Grapefruit">
+    </section>
+
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-badge">Layout 03</div>
+        <h2 class="section-title">Interactive Portrait Grid</h2>
+        <p class="section-desc">A 3x3 image grid demonstrating z-index elevation and CSS transform scaling on hover.</p>
       </div>
-      <div class="grid-cell cell-watermelon">
-        <img src="../assets/fruits/watermelon.png" alt="Watermelon">
+      <div class="section-body">
+        <div class="portrait-container">
+          <div class="portrait-grid">
+            <!-- Replace src attributes with your actual images -->
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 2.png" alt="Portrait 1"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 3.png" alt="Portrait 2"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 4.png" alt="Portrait 3"></div>
+
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 5.png" alt="Portrait 4"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 6.png" alt="Portrait 5"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 7.png" alt="Portrait 6"></div>
+
+            <div class="portrait-item"><img src="../assets/anime-char/image copy 8.png" alt="Portrait 7"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image copy.png" alt="Portrait 8"></div>
+            <div class="portrait-item"><img src="../assets/anime-char/image.png" alt="Portrait 9"></div>
+          </div>
+        </div>
       </div>
-      <div class="grid-cell cell-papaya">
-        <img src="../assets/fruits/papaya.png" alt="Papaya">
+    </section>
+
+    <section class="section-card">
+      <div class="section-header">
+        <div class="section-badge">Layout 04</div>
+        <h2 class="section-title">Editorial Blog Grid</h2>
+        <p class="section-desc">A 3-column asymmetrical CSS grid featuring alternating column spans and
+          flexbox-positioned text overlays.</p>
       </div>
-      <div class="grid-cell cell-pineapples">
-        <img src="../assets/fruits/pineapples.png" alt="Pineapples">
+      <div class="section-body" style="background: #ffffff;">
+        <div class="editorial-container">
+          <div class="editorial-grid">
+
+            <!-- Row 1 -->
+            <div class="editorial-card card-span-1" style="background-image: url('../assets/blog/1.jpg');">
+              <h3 class="card-title">The winter of my discontent</h3>
+              <span class="card-read">READ POST</span>
+            </div>
+            <div class="editorial-card card-span-2" style="background-image: url('../assets/blog/2.png');">
+              <h3 class="card-title">Instagram is toxic but I keep posting</h3>
+              <span class="card-read">READ POST</span>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="editorial-card card-span-2" style="background-image: url('../assets/blog/3.png');">
+              <h3 class="card-title">Throwing my phone into the ocean</h3>
+              <span class="card-read">READ POST</span>
+            </div>
+            <div class="editorial-card card-span-1" style="background-image: url('../assets/blog/4.png');">
+              <h3 class="card-title">I'm never leaving my room</h3>
+              <span class="card-read">READ POST</span>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="editorial-card card-span-1" style="background-image: url('../assets/blog/5.png');">
+              <h3 class="card-title">Staring at the horizon thinking</h3>
+            </div>
+            <div class="editorial-card card-span-1" style="background-image: url('../assets/blog/6.png');">
+              <h3 class="card-title">This is water</h3>
+            </div>
+            <div class="editorial-card card-span-1" style="background-image: url('../assets/blog/7.png');">
+              <h3 class="card-title">Table for one please</h3>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
-</body>
-</html>
 
+  <footer>
+    <p>WisdomSprouts • Grid Assignment • 2026</p>
+  </footer>
+</body>
+
+</html>
