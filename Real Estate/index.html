@@ -286,50 +286,371 @@
       </div>
     </section>
 
-    <!-- ================= WIDE SELECTION SECTION ================= -->
+    <!-- ================= 4. WIDE SELECTION OF PROPERTIES ================= -->
     <section class="selection-section">
       <div class="container">
         <div class="selection-grid">
 
-          <!-- 1. Large Tall Image (Left) -->
+          <!-- Left Tall Image (Capsule Left Corners) -->
           <div class="selection-item selection-tall">
-            <img src="./assets/selection-1.png" alt="Architecture and Properties" class="selection-img">
+            <img src="./assets/selection-1.png" alt="Kitchen & Living Area" class="selection-img">
           </div>
 
-          <!-- 2. Small Top Image (Middle) -->
-          <div class="selection-item selection-top-img">
-            <img src="./assets/selection-2.png" alt="Interior Property" class="selection-img">
+          <!-- Top-Center Image -->
+          <div class="selection-item selection-top-center">
+            <img src="./assets/selection-2.png" alt="Stairway & Entry" class="selection-img">
           </div>
 
-          <!-- 3. Text Header Block (Right) -->
-          <div class="selection-text">
+          <!-- Text Header Block -->
+          <div class="selection-text-block">
             <h2 class="selection-title">Wide Selection Of Properties</h2>
             <p class="selection-desc">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
             </p>
-            <div class="selection-line"></div>
+            <div class="selection-blue-line"></div>
           </div>
 
-          <!-- 4. Wide Image (Middle Bottom) -->
-          <div class="selection-item selection-wide">
-            <img src="./assets/selection-3.png" alt="Modern House Exterior" class="selection-img">
+          <!-- Bottom-Center Wide Image -->
+          <div class="selection-item selection-bottom-center">
+            <img src="./assets/selection-3.png" alt="Luxury Bathroom" class="selection-img">
           </div>
 
-          <!-- 5. Right Stacked Top Image -->
-          <div class="selection-item selection-right-1">
-            <img src="./assets/selection-4.png" alt="Luxury Apartment" class="selection-img">
+          <!-- Right Top Image (Capsule Top-Right Corner) -->
+          <div class="selection-item selection-right-top">
+            <img src="./assets/selection-4.png" alt="Hallway View" class="selection-img">
           </div>
 
-          <!-- 6. Right Stacked Bottom Image -->
-          <div class="selection-item selection-right-2">
-            <img src="./assets/selection-5.png" alt="Residential Villa" class="selection-img">
+          <!-- Right Bottom Image (Capsule Bottom-Right Corner) -->
+          <div class="selection-item selection-right-bottom">
+            <img src="./assets/selection-5.png" alt="Interior View" class="selection-img">
           </div>
 
         </div>
       </div>
     </section>
 
+    <!-- ================= 5. WHY OUR SERVICE IS THE PERFECT CHOICE & INQUIRY FORM ================= -->
+    <section class="why-us-section">
+      <div class="why-us-overlay"></div>
+      <div class="container why-us-container">
+        <div class="why-us-grid">
+
+          <!-- Left Content: 2 Sub-columns -->
+          <div class="why-left-content">
+
+            <!-- Sub-column 1: Title + 02 -->
+            <div class="why-subcol">
+              <div class="why-header">
+                <h2 class="why-title">Why Our Service Is The Perfect Choice?</h2>
+                <div class="why-white-line"></div>
+              </div>
+
+              <div class="why-feature-block">
+                <span class="why-num">02.</span>
+                <h3 class="why-item-title">Lorem Ipsum</h3>
+                <p class="why-item-desc">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sub-column 2: 01 + 03 -->
+            <div class="why-subcol why-subcol-right">
+              <div class="why-feature-block">
+                <span class="why-num">01.</span>
+                <h3 class="why-item-title">Lorem Ipsum</h3>
+                <p class="why-item-desc">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+
+              <div class="why-feature-block">
+                <span class="why-num">03.</span>
+                <h3 class="why-item-title">Lorem Ipsum</h3>
+                <p class="why-item-desc">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Content: Floating White Inquiry Form Card -->
+          <div class="why-right-form">
+            <div class="inquiry-card">
+              <h3 class="inquiry-card-title">Real Estate Inquiry Form</h3>
+              <div class="inquiry-divider"></div>
+
+              <form class="inquiry-form-body" action="#" method="POST">
+                <div class="form-field-group">
+                  <label for="inq-type">Inquiry Type</label>
+                  <div class="select-field-wrap">
+                    <select id="inq-type" name="inquiry_type" required>
+                      <option value="renting" selected>Renting Property</option>
+                      <option value="buying">Buying Property</option>
+                      <option value="selling">Selling Property</option>
+                      <option value="commercial">Commercial Property</option>
+                    </select>
+                    <img src="./assets/dropdown-arrow.png" alt="arrow" class="select-arrow-icon">
+                  </div>
+                </div>
+
+                <div class="form-field-group">
+                  <label for="inq-name">Name</label>
+                  <input type="text" id="inq-name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-field-group">
+                  <label for="inq-email">Email</label>
+                  <input type="email" id="inq-email" name="email" placeholder="example@domain.com" required>
+                </div>
+
+                <div class="form-field-group">
+                  <label for="inq-phone">Phone (Optional)</label>
+                  <input type="tel" id="inq-phone" name="phone" placeholder="+1 (123) 456-0509">
+                </div>
+
+                <div class="form-field-group">
+                  <label for="inq-msg">Message</label>
+                  <textarea id="inq-msg" name="message" rows="3" placeholder="Please Enter Your Message"></textarea>
+                </div>
+
+                <button type="submit" class="btn-inquiry-blue">Submit</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. FEATURED LISTINGS ================= -->
+    <section class="featured-section">
+      <div class="container">
+        <div class="center-header">
+          <h2 class="section-main-title">Featured Listings</h2>
+          <p class="section-sub-title">Browse our wide range of featured properties.</p>
+        </div>
+
+        <div class="featured-cards-grid">
+          <!-- Featured Card 1 -->
+          <div class="featured-prop-card">
+            <div class="card-media-wrap">
+              <img src="./assets/featured-1.jpg" alt="Light And Modern House" class="card-photo">
+              <span class="badge-pill badge-green">FOR RENT</span>
+              <div class="card-stats-overlay">
+                <span><img src="./assets/icon-bed.png" alt="beds" class="stat-icon"> 3</span>
+                <span><img src="./assets/icon-bath.png" alt="baths" class="stat-icon"> 2</span>
+                <span><img src="./assets/icon-sqft.png" alt="sqft" class="stat-icon"> 1950 m2</span>
+              </div>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-prop-name">Light And Modern House</h3>
+              <p class="card-prop-loc">
+                <img src="./assets/icon-pin.png" alt="location" class="pin-icon">
+                7409 Knollwood Cove, Austin, TX, 78731
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Card 2 -->
+          <div class="featured-prop-card">
+            <div class="card-media-wrap">
+              <img src="./assets/featured-2.jpg" alt="Light And Modern House" class="card-photo">
+              <span class="badge-pill badge-green">FOR RENT</span>
+              <div class="card-stats-overlay">
+                <span><img src="./assets/icon-bed.png" alt="beds" class="stat-icon"> 3</span>
+                <span><img src="./assets/icon-bath.png" alt="baths" class="stat-icon"> 2</span>
+                <span><img src="./assets/icon-sqft.png" alt="sqft" class="stat-icon"> 1950 m2</span>
+              </div>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-prop-name">Light And Modern House</h3>
+              <p class="card-prop-loc">
+                <img src="./assets/icon-pin.png" alt="location" class="pin-icon">
+                7409 Knollwood Cove, Austin, TX, 78731
+              </p>
+            </div>
+          </div>
+
+          <!-- Featured Card 3 -->
+          <div class="featured-prop-card">
+            <div class="card-media-wrap">
+              <img src="./assets/featured-3.jpg" alt="Light And Modern House" class="card-photo">
+              <span class="badge-pill badge-green">FOR RENT</span>
+              <div class="card-stats-overlay">
+                <span><img src="./assets/icon-bed.png" alt="beds" class="stat-icon"> 3</span>
+                <span><img src="./assets/icon-bath.png" alt="baths" class="stat-icon"> 2</span>
+                <span><img src="./assets/icon-sqft.png" alt="sqft" class="stat-icon"> 1950 m2</span>
+              </div>
+            </div>
+            <div class="card-info-box">
+              <h3 class="card-prop-name">Light And Modern House</h3>
+              <p class="card-prop-loc">
+                <img src="./assets/icon-pin.png" alt="location" class="pin-icon">
+                7409 Knollwood Cove, Austin, TX, 78731
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Figma Pagination Dots -->
+        <div class="featured-pagination">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. TESTIMONIALS ================= -->
+    <section class="testimonials-full-section">
+      <div class="container">
+        <div class="center-header">
+          <h2 class="section-main-title">Testimonials</h2>
+          <p class="section-sub-title">What Our Clients Say About Us!</p>
+        </div>
+
+        <div class="testimonials-slider-row">
+          <!-- Left Blue Arrow -->
+          <button class="slider-arrow arrow-prev" aria-label="Previous testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- 3 Testimonial Items -->
+          <div class="testimonials-items-grid">
+
+            <!-- Item 1: David Elson -->
+            <div class="testimonial-single">
+              <div class="avatar-circle">
+                <img src="./assets/avatar-1.jpg" alt="David Elson" class="avatar-img">
+              </div>
+              <h3 class="client-name">David Elson</h3>
+              <span class="client-date">7th July 2022</span>
+              <p class="client-quote">
+                “Very professional broker with great apartments selections”
+              </p>
+            </div>
+
+            <!-- Item 2: Stephanie Nicol -->
+            <div class="testimonial-single">
+              <div class="avatar-circle">
+                <img src="./assets/avatar-2.jpg" alt="Stephanie Nicol" class="avatar-img">
+              </div>
+              <h3 class="client-name">Stephanie Nicol</h3>
+              <span class="client-date">7th July 2022</span>
+              <p class="client-quote">
+                “Very good, they offer the best prices of properties and customer service”
+              </p>
+            </div>
+
+            <!-- Item 3: Allen Jordan -->
+            <div class="testimonial-single">
+              <div class="avatar-circle">
+                <img src="./assets/avatar-3.jpg" alt="Allen Jordan" class="avatar-img">
+              </div>
+              <h3 class="client-name">Allen Jordan</h3>
+              <span class="client-date">7th July 2022</span>
+              <p class="client-quote">
+                “Good experience and good customer welcoming reflects level of the broker”
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Blue Arrow -->
+          <button class="slider-arrow arrow-next" aria-label="Next testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ================= 8. NEWSLETTER & FOOTER ================= -->
+  <footer class="figma-footer">
+    <!-- Top Blue Accent Line -->
+    <div class="footer-top-accent-bar"></div>
+
+    <div class="container footer-container">
+
+      <!-- Newsletter Top Row -->
+      <div class="newsletter-row">
+        <h2 class="newsletter-heading">Newletter Signup</h2>
+        <form class="newsletter-pill-form" action="#" method="POST">
+          <input type="email" placeholder="Enter your email" required class="newsletter-pill-input">
+        </form>
+      </div>
+
+      <div class="footer-divider-line"></div>
+
+      <!-- Footer Columns Row -->
+      <div class="footer-columns-grid">
+
+        <!-- Column 1: Brand Logo & Bio -->
+        <div class="footer-brand-column">
+          <a href="#" class="brand footer-brand-link">
+            <div class="brand-icon">
+              <img src="./assets/logo.png" alt="Brand Logo" class="logo-img">
+            </div>
+            <span class="brand-text white-text">Logo</span>
+          </a>
+          <p class="footer-bio-text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+          </p>
+        </div>
+
+        <!-- Column 2: Explore -->
+        <div class="footer-nav-column">
+          <h4 class="col-title">Explore</h4>
+          <ul class="col-links-list">
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-nav-column">
+          <h4 class="col-title">Services</h4>
+          <ul class="col-links-list">
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-nav-column">
+          <h4 class="col-title">Contact</h4>
+          <ul class="col-links-list">
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+            <li><span class="bullet-dot">•</span><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-divider-line"></div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="footer-copyright-bar">
+        <p class="copyright-text">&copy; Lorem Ipsum - All rights reserved</p>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 
