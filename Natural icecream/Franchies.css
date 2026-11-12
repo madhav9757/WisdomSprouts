@@ -1,0 +1,138 @@
+.Shop{
+    background-color: white;
+}
+.note{
+    margin: 40px;
+    padding: 40px;
+   margin-left: 150px;
+   margin-right: 150px;
+    font-size: 20px;
+}
+.note b{
+    margin-bottom: 10px;
+    
+}
+.note p{
+    line-height: 30px;
+    color: rgb(77, 74, 74);
+}
+
+form{
+    height: auto;
+    /* height: 400px; */
+    margin-left: 150px;
+   margin-right: 150px;
+    padding: 50px;
+    background-color: rgb(247, 249, 249);
+    box-shadow: 10px 10px 10px grey;
+    margin-bottom: 20px;
+}
+.form1 h1{
+    text-align: center;
+    color: #00ac4e;
+    padding-bottom: 10px;
+}
+.form1 input{
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    background-color: rgb(211, 207, 207);
+    border: none;
+}
+.form_div{
+    display: flex;
+    justify-content: center;
+}
+.form_div select{
+    margin: 10px;
+    padding: 10px;
+    width: 220px;
+    height: 40px;
+    background-color: rgb(211, 207, 207);
+}
+
+/* form2 */
+.form2{
+    margin-bottom: 20px;
+}
+.form2 h1{
+    text-align: center;
+    color: #00ac4e;
+    padding-bottom: 30px;
+}
+.form_grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    height: 50%;
+    font-size: 18px;
+
+}
+.form2 input{
+    width: 100%;
+    padding: 10px;
+}
+.form_grid select{
+    margin-left: 200px;
+    padding: 10px;
+    background-color: black;
+    color: antiquewhite;
+}
+
+/* form3 */
+.form3{
+    margin-bottom: 20px;
+}
+.form3 h1{
+     text-align: center;
+    color: #00ac4e;
+    padding-bottom: 30px;
+}
+.form3_div{
+    display: flex;
+    justify-content: space-between;
+}
+.form3 input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+.form3_div select{
+    margin-left: 200px;
+    padding: 10px;
+    background-color: black;
+    color: antiquewhite;
+}
+
+/* check */
+.check{
+    /* margin: 100px; */
+     margin-left: 150px;
+   margin-right: 150px;
+    padding: 50px;
+}
+.check input{
+    margin-right: 10px;
+}
+.check button{
+    padding: 10Px;
+    width: 100px;
+    color: white;
+}
+.but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.RESET{
+     margin-left: 20px;
+    background-color: rgb(70, 63, 63);
+    border-radius: 5px;
+}
+.sub{
+    background-color: #00ac4e;
+    border-radius: 5px;
+
+}

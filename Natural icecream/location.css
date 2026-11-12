@@ -1,0 +1,42 @@
+.locationss{
+    display: flex;
+    background-color: #e6e7e9;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+.loc_form{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.loc_form h1{
+    font-size: 41px;
+    padding-bottom: 20px;
+}
+.loc_form input{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.loc_form select{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.loc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.loc_form span{
+    display: inline;
+    width: 120px;
+    padding: 10px;
+    background-color: #00ac4e;
+}
+.loc_form button{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #00ac4e;
+    border: none;
+}
