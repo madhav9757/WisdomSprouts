@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieBook - Ticket Booking</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f5f9;
+        }
+
+        .navbar {
+            background: #171717;
+        }
+
+        .movie-card {
+            border: none;
+            transition: 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .movie-poster {
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .timing-btn {
+            border: 1px solid #198754;
+            color: #198754;
+            font-size: 13px;
+            margin: 3px;
+        }
+
+        .timing-btn:hover {
+            background: #198754;
+            color: white;
+        }
+
+        .screen {
+            width: 80%;
+            height: 8px;
+            margin: auto;
+            background: #adb5bd;
+            border-radius: 50%;
+            box-shadow: 0 5px 12px #adb5bd;
+        }
+
+        .seat {
+            width: 34px;
+            height: 30px;
+            margin: 5px;
+            border: none;
+            border-radius: 6px 6px 2px 2px;
+            background: #198754;
+            color: white;
+            font-size: 11px;
+        }
+
+        .seat.selected {
+            background: #0d6efd;
+        }
+
+        .seat.booked {
+            background: #adb5bd;
+        }
+
+        .seat-legend {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+        }
+
+        .movie-info {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        @media(max-width: 576px) {
+            .movie-poster {
+                height: 260px;
+            }
+
+            .seat {
+                width: 25px;
+                height: 25px;
+                margin: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🎬 MovieBook</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#movies" class="nav-link">Movies</a></li>
+                <li class="nav-item"><a href="#booking" class="nav-link">Booking</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="container text-center py-5">
+    <h1 class="fw-bold">Book Your Movie Tickets</h1>
+    <p class="text-muted">Choose your favourite movie and enjoy the show.</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <input type="text" class="form-control"
+                   placeholder="Search movies...">
+        </div>
+    </div>
+</section>
+
+<!-- Movie Listing -->
+<section class="container pb-5" id="movies">
+
+    <h3 class="fw-bold mb-4">Now Showing</h3>
+
+    <div class="row g-4">
+
+        <!-- Movie 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card movie-card shadow-sm h-100">
+
+                <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                     class="movie-poster card-img-top" alt="Oppenheimer">
+
+                <div class="card-body">
+                    <span class="badge bg-primary">Drama</span>
+                    <h5 class="fw-bold mt-2">Oppenheimer</h5>
+                    <p class="movie-info">3h 00m | ⭐ 8.3/10</p>
+
+                    <p class="fw-semibold mb-2">Show Timings</p>
+
+                    <button class="btn timing-btn">10:00 AM</button>
+                    <button class="btn timing-btn">2:00 PM</button>
+                    <button class="btn timing-btn">7:00 PM</button>
+
+                    <p class="mt-3 fw-bold text-success">₹180 onwards</p>
+
+                    <a href="#booking" class="btn btn-primary w-100">
+                        Book Tickets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card movie-card shadow-sm h-100">
+
+                <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                     class="movie-poster card-img-top" alt="Interstellar">
+
+                <div class="card-body">
+                    <span class="badge bg-success">Sci-Fi</span>
+                    <h5 class="fw-bold mt-2">Interstellar</h5>
+                    <p class="movie-info">2h 49m | ⭐ 8.7/10</p>
+
+                    <p class="fw-semibold mb-2">Show Timings</p>
+
+                    <button class="btn timing-btn">11:00 AM</button>
+                    <button class="btn timing-btn">3:00 PM</button>
+                    <button class="btn timing-btn">8:00 PM</button>
+
+                    <p class="mt-3 fw-bold text-success">₹200 onwards</p>
+
+                    <a href="#booking" class="btn btn-primary w-100">
+                        Book Tickets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card movie-card shadow-sm h-100">
+
+                <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+                     class="movie-poster card-img-top" alt="The Shawshank Redemption">
+
+                <div class="card-body">
+                    <span class="badge bg-warning text-dark">Drama</span>
+                    <h5 class="fw-bold mt-2">The Shawshank Redemption</h5>
+                    <p class="movie-info">2h 22m | ⭐ 9.3/10</p>
+
+                    <p class="fw-semibold mb-2">Show Timings</p>
+
+                    <button class="btn timing-btn">9:00 AM</button>
+                    <button class="btn timing-btn">1:00 PM</button>
+                    <button class="btn timing-btn">6:00 PM</button>
+
+                    <p class="mt-3 fw-bold text-success">₹150 onwards</p>
+
+                    <a href="#booking" class="btn btn-primary w-100">
+                        Book Tickets
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Booking Section -->
+<section class="container py-5" id="booking">
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+
+            <h3 class="fw-bold text-center mb-2">Select Your Seats</h3>
+            <p class="text-muted text-center">Oppenheimer | 7:00 PM | Screen 2</p>
+
+            <div class="screen mt-5 mb-3"></div>
+            <p class="text-center text-muted small">SCREEN THIS WAY</p>
+
+            <!-- Seats -->
+            <div class="text-center mt-4">
+
+                <div class="mb-2">
+                    <button class="seat">A1</button>
+                    <button class="seat">A2</button>
+                    <button class="seat booked">A3</button>
+                    <button class="seat">A4</button>
+                    <button class="seat">A5</button>
+                    <button class="seat">A6</button>
+                </div>
+
+                <div class="mb-2">
+                    <button class="seat">B1</button>
+                    <button class="seat booked">B2</button>
+                    <button class="seat">B3</button>
+                    <button class="seat">B4</button>
+                    <button class="seat">B5</button>
+                    <button class="seat">B6</button>
+                </div>
+
+                <div class="mb-2">
+                    <button class="seat">C1</button>
+                    <button class="seat">C2</button>
+                    <button class="seat">C3</button>
+                    <button class="seat booked">C4</button>
+                    <button class="seat">C5</button>
+                    <button class="seat">C6</button>
+                </div>
+
+                <div class="mb-2">
+                    <button class="seat">D1</button>
+                    <button class="seat">D2</button>
+                    <button class="seat">D3</button>
+                    <button class="seat">D4</button>
+                    <button class="seat">D5</button>
+                    <button class="seat">D6</button>
+                </div>
+
+            </div>
+
+            <!-- Legend -->
+            <div class="d-flex justify-content-center gap-4 flex-wrap mt-4">
+                <span><span class="seat-legend bg-success"></span> Available</span>
+                <span><span class="seat-legend bg-primary"></span> Selected</span>
+                <span><span class="seat-legend bg-secondary"></span> Booked</span>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Selected Seats: <strong>A1, A2</strong></p>
+                    <p>Ticket Price: <strong>₹180 × 2</strong></p>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <h5>Total Amount: <span class="text-success">₹360</span></h5>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button class="btn btn-primary px-5"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal">
+                    Confirm Booking
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Booking Modal (Static UI) -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Booking Details</h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <h5>Oppenheimer</h5>
+                <p class="text-muted">7:00 PM | Screen 2</p>
+
+                <hr>
+
+                <p>Selected Seats: <strong>A1, A2</strong></p>
+                <p>Number of Tickets: <strong>2</strong></p>
+                <p>Total Amount: <strong class="text-success">₹360</strong></p>
+
+                <div class="alert alert-success mb-0">
+                    <strong>Ready to book!</strong> Please review your booking details.
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button class="btn btn-success">
+                    Confirm Payment
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Alert (Static UI) -->
+<div class="container pb-5">
+    <div class="alert alert-success" role="alert">
+        <h5 class="alert-heading">✓ Booking Confirmed!</h5>
+        Your movie tickets have been successfully booked.
+        <hr>
+        <p class="mb-0">Booking ID: MB20261120 | Seats: A1, A2 | Total: ₹360</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2026 MovieBook. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

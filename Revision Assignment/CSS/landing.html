@@ -1,0 +1,651 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+            color: #111;
+        }
+
+        /* Navbar */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav h2 {
+            font-size: 25px;
+        }
+
+        nav div {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: black;
+        }
+
+        .nav-btn {
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            padding: 100px 8%;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-content a {
+            display: inline-block;
+            padding: 15px 25px;
+            background: black;
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+            border: 1px solid #ddd;
+        }
+
+        /* Common Section */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* Features */
+
+        .features {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            flex: 1;
+            min-width: 220px;
+            padding: 30px;
+            background: white;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: black;
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+
+        .testimonials {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-card {
+            flex: 1;
+            min-width: 220px;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 25px;
+        }
+
+        .testimonial-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card h4 {
+            margin-bottom: 5px;
+        }
+
+        .testimonial-card span {
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* Pricing */
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .price-card {
+            flex: 1;
+            min-width: 230px;
+            max-width: 330px;
+            padding: 35px;
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .price-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .price-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .price-card a {
+            display: block;
+            text-align: center;
+            padding: 13px;
+            background: black;
+            color: white;
+            text-decoration: none;
+        }
+
+        .price-card.featured {
+            border: 2px solid black;
+        }
+
+        /* FAQ */
+
+        .faq {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 8%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-content h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-content p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .footer-content a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .footer-content a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #444;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            color: #888;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                padding: 70px 5%;
+                gap: 25px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-wrap: wrap;
+                gap: 18px;
+                padding: 20px 5%;
+            }
+
+            nav div {
+                order: 3;
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 55px 5%;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-image {
+                width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .feature-card,
+            .testimonial-card,
+            .price-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <h2>BUILD.</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </div>
+
+        <a href="#pricing" class="nav-btn">Get Started</a>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <div class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Build Something Amazing.</h1>
+
+            <p>
+                Take your ideas to the next level with our powerful
+                platform. Simple tools, smart solutions and everything
+                you need to grow your business.
+            </p>
+
+            <a href="#pricing">Get Started →</a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900"
+                alt="Modern workspace"
+            >
+
+        </div>
+
+    </div>
+
+    <!-- Features -->
+
+    <section id="features">
+
+        <div class="section-title">
+            <h2>Our Features</h2>
+            <p>Everything you need in one place.</p>
+        </div>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <h3>01. Easy to Use</h3>
+                <p>
+                    A simple and user-friendly interface
+                    that makes your work easier.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>02. Fast Performance</h3>
+                <p>
+                    Optimized tools that help you
+                    complete your work faster.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>03. Secure Platform</h3>
+                <p>
+                    Your data and information
+                    remain protected and secure.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Testimonials -->
+
+    <section id="testimonials">
+
+        <div class="section-title">
+            <h2>What People Say</h2>
+            <p>Feedback from our happy customers.</p>
+        </div>
+
+        <div class="testimonials">
+
+            <div class="testimonial-card">
+                <p>
+                    "This platform made our workflow
+                    much easier. The experience is amazing."
+                </p>
+                <h4>Rahul Sharma</h4>
+                <span>Developer</span>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "Simple design, powerful features
+                    and excellent performance."
+                </p>
+                <h4>Priya Patil</h4>
+                <span>Designer</span>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "A great solution for managing
+                    our everyday business tasks."
+                </p>
+                <h4>Amit Verma</h4>
+                <span>Entrepreneur</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Pricing -->
+
+    <section id="pricing">
+
+        <div class="section-title">
+            <h2>Simple Pricing</h2>
+            <p>Choose the plan that works for you.</p>
+        </div>
+
+        <div class="pricing">
+
+            <div class="price-card">
+
+                <h3>Basic</h3>
+                <div class="price">₹499</div>
+
+                <ul>
+                    <li>Basic Features</li>
+                    <li>5 Projects</li>
+                    <li>Email Support</li>
+                    <li>Basic Analytics</li>
+                </ul>
+
+                <a href="#">Choose Plan</a>
+
+            </div>
+
+            <div class="price-card featured">
+
+                <h3>Professional</h3>
+                <div class="price">₹999</div>
+
+                <ul>
+                    <li>All Basic Features</li>
+                    <li>Unlimited Projects</li>
+                    <li>Priority Support</li>
+                    <li>Advanced Analytics</li>
+                </ul>
+
+                <a href="#">Choose Plan</a>
+
+            </div>
+
+            <div class="price-card">
+
+                <h3>Enterprise</h3>
+                <div class="price">₹1999</div>
+
+                <ul>
+                    <li>All Pro Features</li>
+                    <li>Team Collaboration</li>
+                    <li>24/7 Support</li>
+                    <li>Custom Solutions</li>
+                </ul>
+
+                <a href="#">Choose Plan</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section id="faq">
+
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Some common questions and answers.</p>
+        </div>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <h3>01. What is this platform?</h3>
+                <p>
+                    It is a platform designed to help users
+                    manage their work efficiently.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>02. Can I change my plan?</h3>
+                <p>
+                    Yes, you can upgrade or change
+                    your subscription plan.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>03. Is customer support available?</h3>
+                <p>
+                    Yes, customer support is available
+                    for all subscription plans.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>04. Is there a free trial?</h3>
+                <p>
+                    Contact our team to learn about
+                    available trial options.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>BUILD.</h3>
+                <p>Build better. Work smarter.<br>
+                   Grow faster with us.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 BUILD. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

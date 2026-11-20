@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking</title>
+</head>
+<body>
+
+    <h1>Hospital Appointment Booking</h1>
+    <p>Book your appointment with our experienced doctors.</p>
+
+    <form>
+
+        <h2>Patient Details</h2>
+
+        <label for="name">Patient Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter patient name" required>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter age" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+        <br><br>
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" cols="30" placeholder="Enter address"></textarea>
+        <br><br>
+
+        <h2>Appointment Details</h2>
+
+        <label for="department">Select Department:</label>
+        <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="General Medicine">General Medicine</option>
+            <option value="Dentistry">Dentistry</option>
+        </select>
+        <br><br>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="">-- Select Doctor --</option>
+            <option value="Dr. Rahul Sharma">Dr. Rahul Sharma</option>
+            <option value="Dr. Priya Patil">Dr. Priya Patil</option>
+            <option value="Dr. Amit Verma">Dr. Amit Verma</option>
+            <option value="Dr. Neha Singh">Dr. Neha Singh</option>
+        </select>
+        <br><br>
+
+        <label for="date">Appointment Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <label for="time">Appointment Time:</label>
+        <input type="time" id="time" name="time" required>
+        <br><br>
+
+        <h2>Medical Information</h2>
+
+        <label for="symptoms">Symptoms:</label>
+        <br>
+        <textarea id="symptoms" name="symptoms" rows="4" cols="40"
+        placeholder="Describe your symptoms..."></textarea>
+        <br><br>
+
+        <label for="history">Medical History:</label>
+        <br>
+        <textarea id="history" name="history" rows="5" cols="40"
+        placeholder="Mention previous illnesses, surgeries, allergies or medications..."></textarea>
+        <br><br>
+
+        <label for="report">Upload Medical Reports:</label>
+        <input type="file" id="report" name="report">
+        <br><br>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I confirm that the information provided is correct.</label>
+        <br><br>
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+</body>
+</html>

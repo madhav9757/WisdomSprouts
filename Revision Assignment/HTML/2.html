@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fest Registration</title>
+</head>
+<body>
+
+    <h1>College Fest Registration Form</h1>
+    <p>Register now and be a part of our college fest!</p>
+
+    <form>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="Computer Engineering">Computer Engineering</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Electronics Engineering">Electronics Engineering</option>
+        </select>
+        <br><br>
+
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+            <option value="">-- Select Event --</option>
+            <option value="Dance">Dance Competition</option>
+            <option value="Singing">Singing Competition</option>
+            <option value="Coding">Coding Competition</option>
+            <option value="Sports">Sports</option>
+            <option value="Drama">Drama</option>
+            <option value="Photography">Photography</option>
+        </select>
+        <br><br>
+
+        <label for="date">Select Event Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <input type="submit" value="Register Now">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>

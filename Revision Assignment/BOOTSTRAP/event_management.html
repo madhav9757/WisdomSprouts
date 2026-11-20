@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Events & Experiences</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero-img {
+            height: 450px;
+            object-fit: cover;
+            filter: brightness(55%);
+        }
+
+        .carousel-caption {
+            bottom: 25%;
+        }
+
+        .event-card {
+            transition: 0.3s;
+            border: none;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-card img {
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .event-date {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">EventHub</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Carousel -->
+<section id="home">
+    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#eventCarousel"
+                    data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#eventCarousel"
+                    data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#eventCarousel"
+                    data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1400"
+                     class="d-block w-100 hero-img" alt="Music festival">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Experience Amazing Events</h1>
+                    <p>Discover events, connect with people and create memories.</p>
+                    <a href="#events" class="btn btn-primary btn-lg">Explore Events</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1400"
+                     class="d-block w-100 hero-img" alt="Concert">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Live Music Festival</h1>
+                    <p>Enjoy unforgettable performances and entertainment.</p>
+                    <a href="#events" class="btn btn-primary btn-lg">Book Tickets</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1400"
+                     class="d-block w-100 hero-img" alt="Conference">
+                <div class="carousel-caption">
+                    <h1 class="display-4 fw-bold">Connect & Learn</h1>
+                    <p>Join conferences and meet industry professionals.</p>
+                    <a href="#events" class="btn btn-primary btn-lg">Join Now</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#eventCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#eventCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section class="container py-5" id="events">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Upcoming Events</h2>
+        <p class="text-muted">Find and register for your favourite events.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Event 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card event-card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700"
+                     class="card-img-top" alt="Music concert">
+
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Music</span>
+                    <h5 class="card-title">Summer Music Festival</h5>
+
+                    <p class="event-date">📅 25 November 2026</p>
+                    <p>📍 Phoenix Arena, Pune</p>
+                    <p class="text-muted">Enjoy live music performances from popular artists.</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-success">₹999</h5>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registrationModal"
+                                data-event="Summer Music Festival">
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card event-card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700"
+                     class="card-img-top" alt="Technology conference">
+
+                <div class="card-body">
+                    <span class="badge bg-success mb-2">Technology</span>
+                    <h5 class="card-title">Tech Innovation Summit</h5>
+
+                    <p class="event-date">📅 28 November 2026</p>
+                    <p>📍 Convention Center, Pune</p>
+                    <p class="text-muted">Explore AI, startups, software and new technologies.</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-success">₹499</h5>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registrationModal"
+                                data-event="Tech Innovation Summit">
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card event-card shadow-sm h-100">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700"
+                     class="card-img-top" alt="Business networking event">
+
+                <div class="card-body">
+                    <span class="badge bg-warning text-dark mb-2">Business</span>
+                    <h5 class="card-title">Startup Networking Event</h5>
+
+                    <p class="event-date">📅 5 December 2026</p>
+                    <p>📍 Business Hub, Pune</p>
+                    <p class="text-muted">Meet entrepreneurs, investors and professionals.</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="text-success">₹299</h5>
+                        <button class="btn btn-primary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registrationModal"
+                                data-event="Startup Networking Event">
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-white py-5" id="about">
+    <div class="container text-center">
+        <h2>About EventHub</h2>
+        <p class="text-muted mx-auto" style="max-width: 650px;">
+            EventHub helps people discover exciting events, connect with communities
+            and register for experiences they love.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="container py-5 text-center" id="contact">
+    <h2>Contact Us</h2>
+    <p class="text-muted">Email: support@eventhub.com</p>
+</section>
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Event Registration</h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Selected Event</label>
+                        <input type="text" class="form-control"
+                               id="selectedEvent" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control"
+                               placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control"
+                               placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control"
+                               placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Number of Tickets</label>
+                        <select class="form-select">
+                            <option>1 Ticket</option>
+                            <option>2 Tickets</option>
+                            <option>3 Tickets</option>
+                            <option>4 Tickets</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Submit Registration
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-4 text-center" id="footer">
+    <p class="mb-0">© 2026 EventHub. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const registrationModal = document.getElementById('registrationModal');
+
+    registrationModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const eventName = button.getAttribute('data-event');
+
+        document.getElementById('selectedEvent').value = eventName;
+    });
+</script>
+
+</body>
+</html>

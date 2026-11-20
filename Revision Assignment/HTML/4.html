@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Registration Form</title>
+</head>
+<body>
+
+    <h1>Complaint Registration Form</h1>
+    <p>Please fill out the form below to register your complaint.</p>
+
+    <form>
+
+        <h2>Complaint Details</h2>
+
+        <label for="category">Complaint Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="Technical">Technical Issue</option>
+            <option value="Service">Service Issue</option>
+            <option value="Payment">Payment Issue</option>
+            <option value="Product">Product Issue</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="priority">Complaint Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="">-- Select Priority --</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Urgent">Urgent</option>
+        </select>
+        <br><br>
+
+        <label for="description">Complaint Description:</label>
+        <br>
+        <textarea id="description" name="description" rows="5" cols="40"
+        placeholder="Describe your complaint here..." required></textarea>
+        <br><br>
+
+        <label for="attachment">Attach File:</label>
+        <input type="file" id="attachment" name="attachment">
+        <br><br>
+
+        <h2>Contact Details</h2>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" cols="30"
+        placeholder="Enter your address"></textarea>
+        <br><br>
+
+        <h2>Preferred Resolution</h2>
+
+        <label for="resolution">Preferred Resolution:</label>
+        <select id="resolution" name="resolution" required>
+            <option value="">-- Select Resolution --</option>
+            <option value="Refund">Refund</option>
+            <option value="Replacement">Replacement</option>
+            <option value="Repair">Repair</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="date">Preferred Resolution Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I confirm that the information provided is correct.</label>
+        <br><br>
+
+        <input type="submit" value="Submit Complaint">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+</body>
+</html>

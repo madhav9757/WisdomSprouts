@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Portal</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">ADMISSION PORTAL</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#admission">Admission</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Heading -->
+
+    <div class="container mt-5">
+
+        <div class="text-center mb-4">
+
+            <h1 class="fw-bold">Student Admission Form</h1>
+
+            <p class="text-muted">
+                Fill in your details to apply for admission.
+            </p>
+
+        </div>
+
+
+        <!-- Admission Form -->
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8 col-md-10">
+
+                <div class="card shadow-sm border-0">
+
+                    <div class="card-header bg-dark text-white p-3">
+
+                        <h4 class="mb-0">Personal Information</h4>
+
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <form id="admission">
+
+                            <!-- Student Name -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Full Name</label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">Name</span>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="Enter your full name"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Email Address</label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">@</span>
+
+                                    <input type="email"
+                                        class="form-control"
+                                        placeholder="example@gmail.com"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Phone -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Phone Number</label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">+91</span>
+
+                                    <input type="tel"
+                                        class="form-control"
+                                        placeholder="Enter phone number"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Date of Birth -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Date of Birth</label>
+
+                                <input type="date"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Gender -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Gender</label>
+
+                                <select class="form-select" required>
+
+                                    <option value="">Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Course Selection -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Select Course</label>
+
+                                <select class="form-select" required>
+
+                                    <option value="">Choose Course</option>
+                                    <option>Computer Engineering</option>
+                                    <option>Information Technology</option>
+                                    <option>Mechanical Engineering</option>
+                                    <option>Civil Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Electronics Engineering</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Education -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Previous Qualification</label>
+
+                                <select class="form-select" required>
+
+                                    <option value="">Select Qualification</option>
+                                    <option>10th Pass</option>
+                                    <option>12th Pass</option>
+                                    <option>Diploma</option>
+                                    <option>Graduate</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Address -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Address</label>
+
+                                <textarea class="form-control"
+                                    rows="3"
+                                    placeholder="Enter your full address"
+                                    required></textarea>
+
+                            </div>
+
+
+                            <!-- Documents -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label">Upload Documents</label>
+
+                                <input type="file"
+                                    class="form-control"
+                                    accept=".pdf,.jpg,.jpeg,.png">
+
+                            </div>
+
+
+                            <!-- Checkboxes -->
+
+                            <div class="mb-3">
+
+                                <label class="form-label fw-bold">
+                                    Select Interests
+                                </label>
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input"
+                                        type="checkbox"
+                                        id="sports"
+                                        value="Sports">
+
+                                    <label class="form-check-label" for="sports">
+                                        Sports
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input"
+                                        type="checkbox"
+                                        id="coding"
+                                        value="Coding">
+
+                                    <label class="form-check-label" for="coding">
+                                        Coding
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check">
+
+                                    <input class="form-check-input"
+                                        type="checkbox"
+                                        id="music"
+                                        value="Music">
+
+                                    <label class="form-check-label" for="music">
+                                        Music
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Agreement -->
+
+                            <div class="form-check mb-4">
+
+                                <input class="form-check-input"
+                                    type="checkbox"
+                                    id="agree"
+                                    required>
+
+                                <label class="form-check-label" for="agree">
+                                    I confirm that all information is correct.
+                                </label>
+
+                            </div>
+
+
+                            <!-- Buttons -->
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button type="submit"
+                                    class="btn btn-dark px-4">
+                                    Submit Application
+                                </button>
+
+                                <button type="reset"
+                                    class="btn btn-outline-secondary px-4">
+                                    Reset Form
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="bg-dark text-white text-center p-3 mt-5" id="contact">
+
+        <p class="mb-0">
+            © 2026 Student Admission Portal. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript CDN -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
